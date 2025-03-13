@@ -1,29 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   const particleCount = window.innerWidth < 768 ? 50 : 80;
-
-  // particlesJS("particles-js", {
-  //     particles: {
-  //         number: { value: particleCount, density: { enable: true, value_area: 800 } },
-  //         color: { value: "#2A9D8F" }, // Change the color to teal
-  //         shape: { type: "circle", stroke: { width: 0, color: "#000000" } },
-  //         opacity: { value: 0.5 },
-  //         size: { value: 5, random: true },
-  //         line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 }, 
-  //         move: { enable: true, speed: 6, direction: "none" },
-  //     },
-  //     interactivity: {
-  //         detect_on: "canvas",
-  //         events: {
-  //             onhover: { enable: true, mode: "grab" },
-  //             onclick: { enable: true, mode: "push" },
-  //             resize: true,
-  //         },
-  //     },
-  //     retina_detect: true,
-  // });
-
-  // Change header background color on scroll
-  // Change header background color and SVG fill on scroll
 window.onscroll = function() {
   const header = document.getElementById("header");
   const logoPath = document.getElementById("logo-svg").querySelector(".cls-1");
@@ -468,4 +444,15 @@ const progress = easeOutQuad(currentFrame / totalFrames);
     document.querySelectorAll('.feature-card').forEach(card => {
         card.style.transition = 'all 0.3s ease';
     });
+});
+
+window.addEventListener('resize', function() {
+  const socket = document.querySelector('.socket');
+  if (window.innerWidth < 768) {
+    socket.style.transform = 'scale(0.7)';
+    socket.style.opacity = '0.3';
+  } else {
+    socket.style.transform = 'scale(1)';
+    socket.style.opacity = '1';
+  }
 });
