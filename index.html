@@ -20,7 +20,7 @@
 <body>
   <div class="bg-gray-900 text-white w-full">
     <header id="header" class="fixed top-0 left-0 w-full z-30 header-bg transition-all duration-300" style="font-family: 'Manrope', 'Open Sans', sans-serif">
-      <div class="container mx-auto px-4 py-4 flex justify-between items-center max-w-[calc(100%-100px)]">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center max-w-[calc(100%-30px)] md:max-w-[calc(100%-100px)]">
         <!-- Logo Image -->
         <svg xmlns="http://www.w3.org/2000/svg" id="logo-svg" data-name="Layer 1" viewBox="0 0 481.25 121.64"
         style="height: 40px;margin-left: -9px;">
@@ -31,7 +31,7 @@
             }
   
             .cls-2 {
-              fill: #e76f51;
+              fill: #E76F51;
             }
   
             .cls-3 {
@@ -63,9 +63,9 @@
           d="M164.38,14.89c0,2.69-.52,4.53-1.54,5.5s-2.92,1.47-5.67,1.47-4.56-.48-5.57-1.43-1.5-2.75-1.5-5.4.51-4.53,1.54-5.51,2.91-1.46,5.67-1.46,4.56.48,5.56,1.43S164.38,12.24,164.38,14.89Z" />
       </svg>
   
-        <!-- Mobile Menu Button (kept as your current design) -->
+        <!-- Mobile Menu Button -->
         <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
-          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg class="w-8 h-8 text-[#E76F51]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
         </button>
@@ -118,13 +118,18 @@
   
     <!-- Mobile Sidebar Menu (opens from right) -->
     <div id="mobile-sidebar" class="mobile-sidebar fixed top-0 right-0 w-64 h-full bg-white shadow-lg transition-transform duration-300 z-50">
-      <button id="mobile-close-btn" class="p-4 text-black focus:outline-none">&times;</button>
+      <!-- <button id="mobile-close-btn" class="p-4 text-[#E76F51] text-[xx-large] focus:outline-none">&times;</button> -->
+      <button id="mobile-close-btn" class="md:hidden focus:outline-none p-4">
+        <svg class="w-8 h-8 text-[#E76F51]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
       <nav class="mobile-nav p-4">
         <!-- Dropdown: Products -->
         <div class="mb-4">
           <a href="#" class="dropdown-toggle flex items-center justify-between block py-2 text-gray-700 font-semibold">
             <span>Products</span>
-            <svg class="ml-1 w-4 h-4" fill="#E76F51" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <svg class="ml-1 w-4 h-4 text-[xx-large]" fill="#E76F51" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
             </svg>
           </a>
