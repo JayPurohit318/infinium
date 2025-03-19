@@ -720,6 +720,13 @@ fill: #ffffff !important;
 #header.header-bg-scrolled svg .cls-1 {
 fill: #234653 !important;
 }
+/* Mobile Sidebar styles */
+.mobile-sidebar {
+  transform: translateX(100%);
+}
+.mobile-sidebar.active {
+  transform: translateX(0);
+}
 /* From Uiverse.io by JaydipPrajapati1910 */ 
 buttton {
 background: transparent;

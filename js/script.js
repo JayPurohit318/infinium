@@ -1,25 +1,49 @@
 document.addEventListener("DOMContentLoaded", () => {
   const particleCount = window.innerWidth < 768 ? 50 : 80;
-window.onscroll = function() {
-  const header = document.getElementById("header");
-  const logoPath = document.getElementById("logo-svg").querySelector(".cls-1");
-  
-  if (window.scrollY > 0) {
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileSidebar = document.getElementById('mobile-sidebar');
+  const mobileCloseBtn = document.getElementById('mobile-close-btn');
+
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileSidebar.classList.add('active');
+  });
+
+  mobileCloseBtn.addEventListener('click', () => {
+    mobileSidebar.classList.remove('active');
+  });
+
+  // Dropdown toggling for mobile sidebar:
+  document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      const dropdownMenu = this.nextElementSibling;
+      if (dropdownMenu) {
+        dropdownMenu.classList.toggle('hidden');
+      }
+    });
+  });
+
+  // Scroll functionality for header background and logo color
+  window.onscroll = function() {
+    const header = document.getElementById("header");
+    const logoPath = document.getElementById("logo-svg").querySelector(".cls-1");
+    
+    if (window.scrollY > 0) {
       header.classList.add("header-bg-scrolled");
       header.classList.remove("header-bg");
       logoPath.style.fill = "#234653";
-  } else {
+    } else {
       header.classList.add("header-bg");
       header.classList.remove("header-bg-scrolled");
       logoPath.style.fill = "#ffffff";
-  }
-};
+    }
+  };
 
 
 // Mobile menu toggle
-document.getElementById("mobile-menu-btn").addEventListener("click", function () {
-    document.getElementById("nav-menu").classList.toggle("hidden");
-});
+// document.getElementById("mobile-menu-btn").addEventListener("click", function () {
+//     document.getElementById("nav-menu").classList.toggle("hidden");
+// });
 
    // List of phrases to cycle through
    const phrases = [
