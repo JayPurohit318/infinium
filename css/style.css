@@ -643,6 +643,37 @@ width: 100%;
 .service-card { transition: none; }
 }
 
+.feature-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #E76F51;
+  transition: width 0.3s ease-in-out;
+  }
+  
+  .feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-card:hover::before {
+  width: 100%;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+  .animate-card { animation: none; opacity: 1; }
+  .feature-card { transition: none; }
+  }
+
 /* Add page load animation styles for our product section */
 @keyframes slideUpFadeIn {
 from {
