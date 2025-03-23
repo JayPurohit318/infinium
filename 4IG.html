@@ -1,818 +1,1275 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="js/script.js" defer></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4iG® Platform - Infinnium</title>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/YOUR-KIT-ID.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <style>
-    /* Fade-in Up Animation for Content */
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fade {
-      animation: fadeInUp 1s ease-out forwards;
-      opacity: 0;
-    }
-  </style>
-</head>
-<body >
-  <div class="bg-gray-50 text-gray-800" style="font-family: 'Manrope', 'Open Sans', sans-serif">
-  <!-- Header -->
-  <header id="header" class="fixed top-0 left-0 w-full z-30 header-bg transition-all duration-300" style="font-family: 'Manrope', 'Open Sans', sans-serif">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center max-w-[calc(100%-30px)] md:max-w-[calc(100%-100px)]">
-      <!-- Logo Image -->
-       <a href="index.html">
-      <svg xmlns="http://www.w3.org/2000/svg" id="logo-svg" data-name="Layer 1" viewBox="0 0 481.25 121.64"
-      style="height: 40px;margin-left: -9px;">
-      <defs>
-        <style>
-          .cls-1 {
-            fill: #264653;
-          }
-
-          .cls-2 {
-            fill: #E76F51;
-          }
-
-          .cls-3 {
-            fill: #2a9d8f;
-          }
-        </style>
-      </defs>
-      <path class="cls-1"
-        d="M11.55,96.24a1.61,1.61,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,7,7,0,0,1-1.75.42,24.67,24.67,0,0,1-2.87.14,24,24,0,0,1-2.8-.14,7.63,7.63,0,0,1-1.79-.42,1.89,1.89,0,0,1-.9-.67A1.67,1.67,0,0,1,0,96.24v-63a1.71,1.71,0,0,1,.25-.91,1.76,1.76,0,0,1,.9-.7,6.74,6.74,0,0,1,1.79-.42,22,22,0,0,1,2.8-.14,22.62,22.62,0,0,1,2.87.14,6.22,6.22,0,0,1,1.75.42,2,2,0,0,1,.91.7,1.65,1.65,0,0,1,.28.91Z" />
-      <path class="cls-1"
-        d="M87.14,96.24a1.61,1.61,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,7,7,0,0,1-1.75.42,24,24,0,0,1-2.8.14,24.54,24.54,0,0,1-2.87-.14,6.89,6.89,0,0,1-1.75-.42,2.16,2.16,0,0,1-.91-.67,1.54,1.54,0,0,1-.28-.94V59.35a36.32,36.32,0,0,0-.84-8.68A18.11,18.11,0,0,0,72.3,45a10.62,10.62,0,0,0-4.17-3.64,13.18,13.18,0,0,0-5.91-1.26,15,15,0,0,0-8.68,3.08,47.7,47.7,0,0,0-9.1,9v44a1.54,1.54,0,0,1-.28.94,2.16,2.16,0,0,1-.91.67,6.89,6.89,0,0,1-1.75.42,24.54,24.54,0,0,1-2.87.14,24,24,0,0,1-2.8-.14,7.53,7.53,0,0,1-1.78-.42,1.93,1.93,0,0,1-.91-.67,1.75,1.75,0,0,1-.24-.94v-63a1.86,1.86,0,0,1,.21-1,1.76,1.76,0,0,1,.83-.7,4.77,4.77,0,0,1,1.61-.42,25.76,25.76,0,0,1,2.59-.1c1,0,1.88,0,2.56.1a4.12,4.12,0,0,1,1.57.42,2.2,2.2,0,0,1,.81.7,1.76,1.76,0,0,1,.24,1v8.32a38.73,38.73,0,0,1,10.61-8.71A22.83,22.83,0,0,1,64.6,30.1a23.75,23.75,0,0,1,10.6,2.13,19.22,19.22,0,0,1,7,5.7A22.77,22.77,0,0,1,86,46.3a49.68,49.68,0,0,1,1.16,11.51Z" />
-      <path class="cls-1"
-        d="M144.32,7.35a12.14,12.14,0,0,1-.14,2.13,8.64,8.64,0,0,1-.31,1.3,1.19,1.19,0,0,1-.46.66,1.25,1.25,0,0,1-.7.18,3.29,3.29,0,0,1-1.22-.32c-.49-.21-1.09-.44-1.79-.7a20.73,20.73,0,0,0-2.48-.7,15.72,15.72,0,0,0-3.33-.31,10.52,10.52,0,0,0-4.41.84,6.72,6.72,0,0,0-2.93,2.62,12.58,12.58,0,0,0-1.61,4.62,41,41,0,0,0-.49,6.9v6.86h9.16a1.75,1.75,0,0,1,.94.24,2.09,2.09,0,0,1,.7.84,5.58,5.58,0,0,1,.49,1.51,11.67,11.67,0,0,1,.18,2.23,7.8,7.8,0,0,1-.63,3.64A1.88,1.88,0,0,1,133.61,41h-9.16V96.24a1.61,1.61,0,0,1-.28.94,2.25,2.25,0,0,1-1,.67,7.53,7.53,0,0,1-1.78.42,28.07,28.07,0,0,1-5.6,0,7.63,7.63,0,0,1-1.79-.42,2.15,2.15,0,0,1-.94-.67,1.54,1.54,0,0,1-.28-.94V41h-8.89a1.78,1.78,0,0,1-1.68-1.12,8.71,8.71,0,0,1-.56-3.64,14.08,14.08,0,0,1,.14-2.23,5.36,5.36,0,0,1,.42-1.51,1.82,1.82,0,0,1,.7-.84,1.92,1.92,0,0,1,1-.24h8.89V24.92a45.89,45.89,0,0,1,1.22-11.31,19.53,19.53,0,0,1,3.75-7.73,14.89,14.89,0,0,1,6.33-4.44,25.42,25.42,0,0,1,9-1.44,24,24,0,0,1,4.76.46,18.5,18.5,0,0,1,3.57,1,5.62,5.62,0,0,1,1.68.94,3.26,3.26,0,0,1,.7,1.08,5.76,5.76,0,0,1,.39,1.61A21.21,21.21,0,0,1,144.32,7.35Z" />
-      <path class="cls-1"
-        d="M292.28,96a1.59,1.59,0,0,1-.28.94,2.13,2.13,0,0,1-.91.66,6.22,6.22,0,0,1-1.75.42,24.79,24.79,0,0,1-2.87.14,23.84,23.84,0,0,1-2.8-.14,6.74,6.74,0,0,1-1.79-.42,1.9,1.9,0,0,1-.91-.66,1.73,1.73,0,0,1-.24-.94V33.24a1.79,1.79,0,0,1,.24-.91,1.89,1.89,0,0,1,.91-.7,7.21,7.21,0,0,1,1.79-.41,21.84,21.84,0,0,1,2.8-.14,22.73,22.73,0,0,1,2.87.14,6.64,6.64,0,0,1,1.75.41,2.1,2.1,0,0,1,.91.7,1.65,1.65,0,0,1,.28.91Z" />
-      <path class="cls-1"
-        d="M339.8,99.74a35.89,35.89,0,0,1-9.31-1.12,25.42,25.42,0,0,1-7.24-3.15A21.25,21.25,0,0,1,318,90.6a24.17,24.17,0,0,1-3.43-6.19,24.73,24.73,0,0,1-1.4-5.53,47.81,47.81,0,0,1-.42-6.58V31.5h10.85V72.23A25.21,25.21,0,0,0,325,81.47a13.73,13.73,0,0,0,5.43,6.61A17.3,17.3,0,0,0,340,90.5q6.17,0,9.9-2.66a14.62,14.62,0,0,0,5.36-7.14,26.18,26.18,0,0,0,1.19-8.47V31.5h10.85V72.37a47,47,0,0,1-.39,6.26A27.92,27.92,0,0,1,365.7,84a24.24,24.24,0,0,1-3.47,6.33,21.49,21.49,0,0,1-5.42,5,26.12,26.12,0,0,1-7.46,3.25A36.26,36.26,0,0,1,339.8,99.74Z" />
-      <path class="cls-1"
-        d="M481.25,96.24a1.61,1.61,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,7,7,0,0,1-1.75.42,24,24,0,0,1-2.8.14,24.67,24.67,0,0,1-2.87-.14,7.63,7.63,0,0,1-1.79-.42,2.21,2.21,0,0,1-.94-.67,1.54,1.54,0,0,1-.28-.94V58a34.87,34.87,0,0,0-.7-7.28A16.82,16.82,0,0,0,466.69,45a10.5,10.5,0,0,0-3.92-3.64,11.8,11.8,0,0,0-5.6-1.26,13.18,13.18,0,0,0-8,3.08,55.61,55.61,0,0,0-8.86,9v44a1.6,1.6,0,0,1-.27.94,2.25,2.25,0,0,1-.95.67,7.53,7.53,0,0,1-1.78.42,27.77,27.77,0,0,1-5.57,0,7.56,7.56,0,0,1-1.82-.42,1.93,1.93,0,0,1-.91-.67,1.75,1.75,0,0,1-.24-.94V58a32.2,32.2,0,0,0-.77-7.28A18.22,18.22,0,0,0,425.68,45a10.57,10.57,0,0,0-3.89-3.64,11.58,11.58,0,0,0-5.56-1.26,13.35,13.35,0,0,0-8.05,3.08,52.85,52.85,0,0,0-8.82,9v44a1.54,1.54,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,6.89,6.89,0,0,1-1.75.42,24.67,24.67,0,0,1-2.87.14,24,24,0,0,1-2.8-.14,7.53,7.53,0,0,1-1.78-.42,1.88,1.88,0,0,1-.91-.67,1.67,1.67,0,0,1-.25-.94v-63a2,2,0,0,1,.21-1,1.84,1.84,0,0,1,.84-.7,4.77,4.77,0,0,1,1.61-.42,25.76,25.76,0,0,1,2.59-.1c1,0,1.88,0,2.56.1a4.12,4.12,0,0,1,1.57.42,2.28,2.28,0,0,1,.81.7,1.76,1.76,0,0,1,.24,1v8.32a41.11,41.11,0,0,1,10.32-8.71,20.77,20.77,0,0,1,10.12-2.76,25,25,0,0,1,7,.91,18.68,18.68,0,0,1,5.5,2.55,17.19,17.19,0,0,1,4.06,3.92,23,23,0,0,1,2.8,5.07,65,65,0,0,1,6-5.81,36.18,36.18,0,0,1,5.46-3.84,22.13,22.13,0,0,1,5.11-2.14,19.35,19.35,0,0,1,5-.66,22.12,22.12,0,0,1,10.22,2.13,18.56,18.56,0,0,1,6.68,5.7,22.7,22.7,0,0,1,3.64,8.37,45.28,45.28,0,0,1,1.09,10.11Z" />
-      <path class="cls-2"
-        d="M237.59,83.29a1.54,1.54,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,6.89,6.89,0,0,1-1.75.42,24,24,0,0,1-2.8.14,24.67,24.67,0,0,1-2.87-.14,6.89,6.89,0,0,1-1.75-.42,2.23,2.23,0,0,1-.91-.67,1.54,1.54,0,0,1-.28-.94V46.4a36.32,36.32,0,0,0-.84-8.68,17.88,17.88,0,0,0-2.45-5.67,10.66,10.66,0,0,0-4.16-3.64,13.25,13.25,0,0,0-5.92-1.26A14.93,14.93,0,0,0,204,30.23a47.13,47.13,0,0,0-9.1,9v44a1.61,1.61,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,7,7,0,0,1-1.75.42,24.79,24.79,0,0,1-2.87.14,23.84,23.84,0,0,1-2.8-.14,7.63,7.63,0,0,1-1.79-.42,2,2,0,0,1-.91-.67,1.75,1.75,0,0,1-.24-.94v-63a2,2,0,0,1,.21-.94,1.84,1.84,0,0,1,.84-.7,4.71,4.71,0,0,1,1.61-.42,25,25,0,0,1,2.59-.11,25.29,25.29,0,0,1,2.55.11,4.18,4.18,0,0,1,1.58.42,2.16,2.16,0,0,1,.8.7,1.67,1.67,0,0,1,.25.94v8.33a38.7,38.7,0,0,1,10.6-8.71,22.83,22.83,0,0,1,10.67-2.76,23.8,23.8,0,0,1,10.61,2.13,19,19,0,0,1,7,5.7,22.79,22.79,0,0,1,3.82,8.37,49.73,49.73,0,0,1,1.15,11.51Z" />
-      <path class="cls-2"
-        d="M205.07,41.2a1.54,1.54,0,0,1,.28-.94,2.07,2.07,0,0,1,.91-.66,6.13,6.13,0,0,1,1.75-.42,21.84,21.84,0,0,1,2.8-.14,22.73,22.73,0,0,1,2.87.14,6.22,6.22,0,0,1,1.75.42,2.13,2.13,0,0,1,.91.66,1.61,1.61,0,0,1,.28.94V78a36.17,36.17,0,0,0,.84,8.67,18,18,0,0,0,2.44,5.66A10.74,10.74,0,0,0,224.07,96,13.18,13.18,0,0,0,230,97.25a14.93,14.93,0,0,0,8.68-3.08,46.67,46.67,0,0,0,9.1-9v-44a1.54,1.54,0,0,1,.28-.94,2.13,2.13,0,0,1,.91-.66,6.13,6.13,0,0,1,1.75-.42,22.62,22.62,0,0,1,2.87-.14,22,22,0,0,1,2.8.14,6.56,6.56,0,0,1,1.78.42,1.81,1.81,0,0,1,.91.66,1.67,1.67,0,0,1,.25.94v62.9a2,2,0,0,1-.21.94,1.84,1.84,0,0,1-.84.7,4.77,4.77,0,0,1-1.61.42,25.63,25.63,0,0,1-2.59.1c-1,0-1.88,0-2.55-.1a4.13,4.13,0,0,1-1.58-.42,2.16,2.16,0,0,1-.8-.7,1.67,1.67,0,0,1-.25-.94V95.78a38.64,38.64,0,0,1-10.6,8.7,22.84,22.84,0,0,1-10.68,2.76,23.75,23.75,0,0,1-10.6-2.13,19,19,0,0,1-7-5.7,22.53,22.53,0,0,1-3.82-8.35,49.61,49.61,0,0,1-1.15-11.49Z" />
-      <path class="cls-1"
-        d="M162.86,96.24a1.54,1.54,0,0,1-.28.94,2.16,2.16,0,0,1-.91.67,6.89,6.89,0,0,1-1.75.42,24.54,24.54,0,0,1-2.87.14,24,24,0,0,1-2.8-.14,7.53,7.53,0,0,1-1.78-.42,1.88,1.88,0,0,1-.91-.67,1.67,1.67,0,0,1-.25-.94v-63a1.71,1.71,0,0,1,.25-.91,1.74,1.74,0,0,1,.91-.7,6.66,6.66,0,0,1,1.78-.42,22,22,0,0,1,2.8-.14,22.52,22.52,0,0,1,2.87.14,6.13,6.13,0,0,1,1.75.42,2,2,0,0,1,.91.7,1.58,1.58,0,0,1,.28.91Z" />
-      <path class="cls-3"
-        d="M293.61,114.67c0,2.7-.52,4.53-1.54,5.51s-2.92,1.46-5.67,1.46-4.56-.47-5.57-1.43-1.5-2.75-1.5-5.4.51-4.53,1.54-5.5,2.91-1.47,5.67-1.47,4.56.48,5.56,1.43S293.61,112,293.61,114.67Z" />
-      <path class="cls-3"
-        d="M164.38,14.89c0,2.69-.52,4.53-1.54,5.5s-2.92,1.47-5.67,1.47-4.56-.48-5.57-1.43-1.5-2.75-1.5-5.4.51-4.53,1.54-5.51,2.91-1.46,5.67-1.46,4.56.48,5.56,1.43S164.38,12.24,164.38,14.89Z" />
-    </svg>
-  </a>
-      <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
-        <svg class="w-8 h-8 text-[#E76F51]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </button>
-
-      <!-- Desktop Navigation Menu -->
-      <nav id="nav-menu" class="hidden md:flex md:space-x-12 absolute md:relative top-16 md:top-auto left-0 w-full md:w-auto md:bg-transparent text-white md:flex-row flex-col items-center md:items-center md:space-x-12 md:p-0 p-4 transition-all duration-300 z-50" style="font-family: 'Manrope', 'Open Sans', sans-serif">
-        <div class="relative group">
-          <a href="#" class="hover:text-gray-300 flex items-left transition duration-300">Products</a>
-          <div class="absolute left-1/2 transform -translate-x-1/2 mt-0 hidden group-hover:flex flex-col bg-[#ffffff] text-[#444444] shadow-lg w-72 py-2 text-left rounded transition-all duration-300 z-50" style="margin-left: 89px;">
-            <a href="4IG.html" class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300">4iG®</a>
-            <a href="hero_section/hero.html" class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300">DataBreach™</a>
-            <a href="#" class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300">ObscurePI®</a>
-          </div>
-        </div>
-
-        <div class="relative group">
-          <a href="#" class="hover:text-gray-300 flex items-center transition duration-300">Solutions</a>
-          <div class="absolute left-1/2 transform -translate-x-1/2 mt-0 hidden group-hover:flex flex-col bg-[#ffffff] text-[#444444] shadow-lg w-60 py-2 text-left rounded transition-all duration-300 z-50" style="margin-left: 65px;">
-            <a href="#" class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300">Breach Response</a>
-            <a href="#" class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300">Unified Information Governance</a>
-            <a href="#" class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition dration-300">Data Protection/DSAR</a>
-            <a href="#" class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300">eDiscovery</a>
-            <a href="#" class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300">Automated Redaction</a>
-            <a href="#" class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300">Data Mapping</a>
-            <a href="#" class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300">Data Retention</a>
-            <a href="#" class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300">Unified Archival</a>
-            <a href="#" class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300">Data Disposition</a>
-            <a href="#" class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300">Legal Hold</a>
-          </div>
-        </div>
-
-        <a href="product.html" class="hover:text-gray-300">Become a partner</a>
-
-        <div class="relative group">
-          <a href="#" class="hover:text-gray-300 flex items-center transition duration-300">Resources</a>
-          <div class="absolute left-1/2 transform -translate-x-1/2 mt-0 hidden group-hover:flex flex-col bg-[#ffffff] text-[#444444] shadow-lg w-72 py-2 text-left rounded transition-all duration-300 z-50" style="margin-left: 85px;">
-            <a href="#" class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300">News and Events</a>
-            <a href="#" class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300">Blog</a>
-          </div>
-        </div>
-
-        <a href="#" class="hover:text-gray-300">About us</a>
-      </nav>
-
-      <a href="4IG.html" class="relative hidden md:flex border-[1.5px] border-[#E76F51] text-white px-6 py-2 rounded-3xl overflow-hidden transition-all duration-300 ease-in-out" style="font-family: 'Manrope', 'Open Sans', sans-serif;">
-        <span class="relative z-10">Contact<span class="ml-2 mb-1">→</span></span>
-      </a>
-    </div>
-  </header>
-
-  <!-- Mobile Sidebar Menu (opens from right) -->
-  <div id="mobile-sidebar" class="mobile-sidebar fixed top-0 right-0 w-64 h-full bg-white shadow-lg transition-transform duration-300 z-50">
-    <!-- <button id="mobile-close-btn" class="p-4 text-[#E76F51] text-[xx-large] focus:outline-none">&times;</button> -->
-    <button id="mobile-close-btn" class="md:hidden focus:outline-none p-4">
-      <svg class="w-8 h-8 text-[#E76F51]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-      </svg>
-    </button>
-    <nav class="mobile-nav p-4">
-      <!-- Dropdown: Products -->
-      <div class="mb-4">
-        <a href="#" class="dropdown-toggle flex items-center justify-between block py-2 text-gray-700 font-semibold">
-          <span>Products</span>
-          <svg class="ml-1 w-4 h-4 text-[xx-large]" fill="#E76F51" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </a>
-        <div class="dropdown-menu ml-4 hidden">
-          <a href="4IG.html" class="block py-1 text-gray-600">4iG®</a>
-          <a href="#" class="block py-1 text-gray-600">DataBreach™</a>
-          <a href="#" class="block py-1 text-gray-600">ObscurePI®</a>
-        </div>
-      </div>
-      <!-- Dropdown: Solutions -->
-      <div class="mb-4">
-        <a href="#" class="dropdown-toggle flex items-center justify-between block py-2 text-gray-700 font-semibold">
-          <span>Solutions</span>
-          <svg class="ml-1 w-4 h-4" fill="#E76F51" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </a>
-        <div class="dropdown-menu ml-4 hidden">
-          <a href="#" class="block py-1 text-gray-600">Breach Response</a>
-          <a href="#" class="block py-1 text-gray-600">Unified Information Governance</a>
-          <a href="#" class="block py-1 text-gray-600">Data Protection/DSAR</a>
-          <a href="#" class="block py-1 text-gray-600">eDiscovery</a>
-          <a href="#" class="block py-1 text-gray-600">Automated Redaction</a>
-          <a href="#" class="block py-1 text-gray-600">Data Mapping</a>
-          <a href="#" class="block py-1 text-gray-600">Data Retention</a>
-          <a href="#" class="block py-1 text-gray-600">Unified Archival</a>
-          <a href="#" class="block py-1 text-gray-600">Data Disposition</a>
-          <a href="#" class="block py-1 text-gray-600">Legal Hold</a>
-        </div>
-      </div>
-      <!-- Become a partner (no dropdown) -->
-      <div class="mb-4">
-        <a href="product.html" class="block py-2 text-gray-700 font-semibold">Become a partner</a>
-      </div>
-      <!-- Dropdown: Resources -->
-      <div class="mb-4">
-        <a href="#" class="dropdown-toggle flex items-center justify-between block py-2 text-gray-700 font-semibold">
-          <span>Resources</span>
-          <svg class="ml-1 w-4 h-4" fill="#E76F51" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </a>
-        <div class="dropdown-menu ml-4 hidden">
-          <a href="#" class="block py-1 text-gray-600">News and Events</a>
-          <a href="#" class="block py-1 text-gray-600">Blog</a>
-        </div>
-      </div>
-      <!-- About us (no dropdown) -->
-      <div>
-        <a href="#" class="block py-2 text-gray-700 font-semibold">About us</a>
-      </div>
-    </nav>
-  </div>
-
-  <section class="relative h-screen flex items-center justify-center overflow-hidden bg-gray-900">
-    <!-- Canvas for Honeycomb Background -->
-    <canvas id="honeycombCanvas" class="absolute inset-0"></canvas>
-    
-    <!-- Content Container -->
-    <div class="relative z-10 text-center px-6 animate-fade">
-      <h1 class="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg">
-        Revolutionizing Data Governance
-      </h1>
-      <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-        Empower your organization with advanced insights through a dynamic, honeycomb-inspired experience.
-      </p>
-      <div class="mt-8">
-        <a href="#overview" class="px-8 py-3 bg-white text-gray-900 font-bold rounded-lg shadow-lg hover:bg-gray-200 transition">
-          Learn More
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-[#EAF4F2] opacity-0 animate-fade">
-    <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-gray-900 text-center">4iG<sup>®</sup></h2>
-      <p class="mt-4 max-w-3xl mx-auto text-center text-gray-700">
-        Experience a revolution in data management with Infinnium’s 4iG® platform. Built to tackle modern data challenges head-on, 4iG® is an advanced technology solution that empowers organizations to manage their data in place, eliminating risk and outdated workflows. Our game-changing platform natively integrates seamlessly with enterprise data and leverages artificial intelligence to identify, classify, and categorize data in real time. 4iG® doesn’t change how you work with your data; it enhances it significantly, allowing you to navigate today’s vast and complex data landscape with unparalleled efficiency and precision.
-      </p>
-  
-      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow feature-card">
-          <div class="text-[#E76F51]">
-            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-5-9-5-9 5 9 5z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12l9-5-9-5-9 5 9 5z"/>
-            </svg>
-          </div>
-          <h3 class="mt-4 text-xl font-semibold text-gray-800 text-center">Connect</h3>
-          <p class="mt-2 text-gray-600 text-center">
-            Connect directly to both structured and unstructured data. With over 50 data connectors and the option for custom builds per client request, Infinnium provides the capability to index, OCR and process data in place.
-          </p>
-        </div>
-  
-        <div class="bg-white p-6 rounded-lg shadow feature-card">
-          <div class="text-[#E76F51]">
-            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12"/>
-            </svg>
-          </div>
-          <h3 class="mt-4 text-xl font-semibold text-gray-800 text-center">Analyze</h3>
-          <p class="mt-2 text-gray-600 text-center">
-            Artificial intelligence technology is leveraged to classify the data while enabling analysis that reveals patterns, behavior and key insights on a mass scale.
-          </p>
-        </div>
-  
-        <div class="bg-white p-6 rounded-lg shadow feature-card">
-          <div class="text-[#E76F51]">
-            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6a2 2 0 114 0v6m-4-6a2 2 0 00-4 0v6m8-6a2 2 0 014 0v6"/>
-            </svg>
-          </div>
-          <h3 class="mt-4 text-xl font-semibold text-gray-800 text-center">Organize</h3>
-          <p class="mt-2 text-gray-600 text-center">
-            4iG® delivers unprecedented visibility into data by capturing and organizing it into a unified repository, Enabling you to solve today’s data challenges.
-          </p>
-        </div>
-  
-        <div class="bg-white p-6 rounded-lg shadow feature-card">
-          <div class="text-[#E76F51]">
-            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-            </svg>
-          </div>
-          <h3 class="mt-4 text-xl font-semibold text-gray-800 text-center">Act</h3>
-          <p class="mt-2 text-gray-600 text-center">
-            Corporations, law firms and service providers are able to glean insights, proactively mitigate risk, and transform governance with game-changing accuracy, efficiency, and cost savings.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- photo and description -->
-  <section class="max-w-screen-xl mx-auto px-4 py-12 lg:py-20">
-    
-    <!-- Block #1: Image Right, Text Left -->
-    <div class="flex flex-col-reverse lg:flex-row items-center lg:space-x-8">
-      <!-- Left Column: Text -->
-      <div class="w-full lg:w-1/2 mt-8 lg:mt-0">
-        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          A Single Source Of Truth For All.
-        </h1>
-        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
-          A single source of truth (SSOT) is a crucial strategy in ensuring data 
-          integrity, consistency, and accessibility across an organization. By 
-          centralizing data into one authoritative repository, organizations can 
-          mitigate the risks associated with data silos, where disparate systems 
-          and databases hold conflicting or outdated information.
-        </p>
-        <p class="mt-4 text-base md:text-lg text-gray-700 leading-relaxed">
-          SSOT enhances decision-making by providing stakeholders with reliable 
-          and up-to-date data, reducing transparency and trust. It also streamlines 
-          compliance with regulatory requirements by maintaining a comprehensive, 
-          auditable trail of data activities. In essence, SSOT is a foundational 
-          element in modern information governance, driving efficiency, reducing 
-          redundancy, and enabling robust data privacy and security measures.
-        </p>
-      </div>
-      <!-- Right Column: Image -->
-      <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
-        <!-- Replace with your actual image source -->
-        <img 
-          src="images/product-4ig1.png" 
-          alt="Dashboard Preview" 
-          class="w-full h-auto max-w-md lg:max-w-none"
-        />
-      </div>
-    </div>
-
-    <!-- Spacer between blocks -->
-    <div class="mt-12"></div>
-
-    <!-- Block #2: Image Left, Text Right -->
-    <div class="flex flex-col lg:flex-row items-center lg:space-x-8">
-      <!-- Left Column: Image -->
-      <div class="w-full lg:w-1/2 flex justify-center lg:justify-start">
-        <!-- Replace IMAGE_URL_2 with your actual second image source -->
-        <img 
-          src="images/product-4ig2.png" 
-          alt="Reduce The Data Under Management Budget"
-          class="w-full h-auto max-w-md lg:max-w-none"
-        />
-      </div>
-      <!-- Right Column: Text -->
-      <div class="w-full lg:w-1/2 mt-8 lg:mt-0">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Reduce The Data Under Management Budget... <br />
-          Or As We Call It, The DUMB!
-        </h2>
-        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
-          Reducing ROT (Redundant, Obsolete, and Trivial) data not only 
-          mitigates risks and costs but also positions an organization for 
-          next-generation digital transformation. Infinium’s 6R™ software 
-          platform is specifically designed to tackle these challenges by 
-          managing data in its existing locations, avoiding unnecessary 
-          duplication. By identifying and intelligently reducing ROT, 6R™ 
-          ensures smarter data management aligned with compliance requirements, 
-          paving the way for enhanced digital capabilities and efficiencies.
-        </p>
-        <button 
-          type="button" 
-          class="mt-6 inline-block bg-red-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-red-600 transition-colors"
+  <head>
+    <link rel="stylesheet" href="css/style.css" q />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="js/script.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4iG® Platform - Infinnium</title>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/YOUR-KIT-ID.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <style>
+      /* Fade-in Up Animation for Content */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade {
+        animation: fadeInUp 1s ease-out forwards;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="bg-gray-50 text-gray-800"
+      style="font-family: 'Manrope', 'Open Sans', sans-serif"
+    >
+      <!-- Header -->
+      <header
+        id="header"
+        class="fixed top-0 left-0 w-full z-30 header-bg transition-all duration-300"
+        style="font-family: 'Manrope', 'Open Sans', sans-serif"
+      >
+        <div
+          class="container mx-auto px-4 py-4 flex justify-between items-center max-w-[calc(100%-30px)] md:max-w-[calc(100%-100px)]"
         >
-          View Details
+          <!-- Logo Image -->
+          <a href="index.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              id="logo-svg"
+              data-name="Layer 1"
+              viewBox="0 0 481.25 121.64"
+              style="height: 40px; margin-left: -9px"
+            >
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: #264653;
+                  }
+
+                  .cls-2 {
+                    fill: #e76f51;
+                  }
+
+                  .cls-3 {
+                    fill: #2a9d8f;
+                  }
+                </style>
+              </defs>
+              <path
+                class="cls-1"
+                d="M11.55,96.24a1.61,1.61,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,7,7,0,0,1-1.75.42,24.67,24.67,0,0,1-2.87.14,24,24,0,0,1-2.8-.14,7.63,7.63,0,0,1-1.79-.42,1.89,1.89,0,0,1-.9-.67A1.67,1.67,0,0,1,0,96.24v-63a1.71,1.71,0,0,1,.25-.91,1.76,1.76,0,0,1,.9-.7,6.74,6.74,0,0,1,1.79-.42,22,22,0,0,1,2.8-.14,22.62,22.62,0,0,1,2.87.14,6.22,6.22,0,0,1,1.75.42,2,2,0,0,1,.91.7,1.65,1.65,0,0,1,.28.91Z"
+              />
+              <path
+                class="cls-1"
+                d="M87.14,96.24a1.61,1.61,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,7,7,0,0,1-1.75.42,24,24,0,0,1-2.8.14,24.54,24.54,0,0,1-2.87-.14,6.89,6.89,0,0,1-1.75-.42,2.16,2.16,0,0,1-.91-.67,1.54,1.54,0,0,1-.28-.94V59.35a36.32,36.32,0,0,0-.84-8.68A18.11,18.11,0,0,0,72.3,45a10.62,10.62,0,0,0-4.17-3.64,13.18,13.18,0,0,0-5.91-1.26,15,15,0,0,0-8.68,3.08,47.7,47.7,0,0,0-9.1,9v44a1.54,1.54,0,0,1-.28.94,2.16,2.16,0,0,1-.91.67,6.89,6.89,0,0,1-1.75.42,24.54,24.54,0,0,1-2.87.14,24,24,0,0,1-2.8-.14,7.53,7.53,0,0,1-1.78-.42,1.93,1.93,0,0,1-.91-.67,1.75,1.75,0,0,1-.24-.94v-63a1.86,1.86,0,0,1,.21-1,1.76,1.76,0,0,1,.83-.7,4.77,4.77,0,0,1,1.61-.42,25.76,25.76,0,0,1,2.59-.1c1,0,1.88,0,2.56.1a4.12,4.12,0,0,1,1.57.42,2.2,2.2,0,0,1,.81.7,1.76,1.76,0,0,1,.24,1v8.32a38.73,38.73,0,0,1,10.61-8.71A22.83,22.83,0,0,1,64.6,30.1a23.75,23.75,0,0,1,10.6,2.13,19.22,19.22,0,0,1,7,5.7A22.77,22.77,0,0,1,86,46.3a49.68,49.68,0,0,1,1.16,11.51Z"
+              />
+              <path
+                class="cls-1"
+                d="M144.32,7.35a12.14,12.14,0,0,1-.14,2.13,8.64,8.64,0,0,1-.31,1.3,1.19,1.19,0,0,1-.46.66,1.25,1.25,0,0,1-.7.18,3.29,3.29,0,0,1-1.22-.32c-.49-.21-1.09-.44-1.79-.7a20.73,20.73,0,0,0-2.48-.7,15.72,15.72,0,0,0-3.33-.31,10.52,10.52,0,0,0-4.41.84,6.72,6.72,0,0,0-2.93,2.62,12.58,12.58,0,0,0-1.61,4.62,41,41,0,0,0-.49,6.9v6.86h9.16a1.75,1.75,0,0,1,.94.24,2.09,2.09,0,0,1,.7.84,5.58,5.58,0,0,1,.49,1.51,11.67,11.67,0,0,1,.18,2.23,7.8,7.8,0,0,1-.63,3.64A1.88,1.88,0,0,1,133.61,41h-9.16V96.24a1.61,1.61,0,0,1-.28.94,2.25,2.25,0,0,1-1,.67,7.53,7.53,0,0,1-1.78.42,28.07,28.07,0,0,1-5.6,0,7.63,7.63,0,0,1-1.79-.42,2.15,2.15,0,0,1-.94-.67,1.54,1.54,0,0,1-.28-.94V41h-8.89a1.78,1.78,0,0,1-1.68-1.12,8.71,8.71,0,0,1-.56-3.64,14.08,14.08,0,0,1,.14-2.23,5.36,5.36,0,0,1,.42-1.51,1.82,1.82,0,0,1,.7-.84,1.92,1.92,0,0,1,1-.24h8.89V24.92a45.89,45.89,0,0,1,1.22-11.31,19.53,19.53,0,0,1,3.75-7.73,14.89,14.89,0,0,1,6.33-4.44,25.42,25.42,0,0,1,9-1.44,24,24,0,0,1,4.76.46,18.5,18.5,0,0,1,3.57,1,5.62,5.62,0,0,1,1.68.94,3.26,3.26,0,0,1,.7,1.08,5.76,5.76,0,0,1,.39,1.61A21.21,21.21,0,0,1,144.32,7.35Z"
+              />
+              <path
+                class="cls-1"
+                d="M292.28,96a1.59,1.59,0,0,1-.28.94,2.13,2.13,0,0,1-.91.66,6.22,6.22,0,0,1-1.75.42,24.79,24.79,0,0,1-2.87.14,23.84,23.84,0,0,1-2.8-.14,6.74,6.74,0,0,1-1.79-.42,1.9,1.9,0,0,1-.91-.66,1.73,1.73,0,0,1-.24-.94V33.24a1.79,1.79,0,0,1,.24-.91,1.89,1.89,0,0,1,.91-.7,7.21,7.21,0,0,1,1.79-.41,21.84,21.84,0,0,1,2.8-.14,22.73,22.73,0,0,1,2.87.14,6.64,6.64,0,0,1,1.75.41,2.1,2.1,0,0,1,.91.7,1.65,1.65,0,0,1,.28.91Z"
+              />
+              <path
+                class="cls-1"
+                d="M339.8,99.74a35.89,35.89,0,0,1-9.31-1.12,25.42,25.42,0,0,1-7.24-3.15A21.25,21.25,0,0,1,318,90.6a24.17,24.17,0,0,1-3.43-6.19,24.73,24.73,0,0,1-1.4-5.53,47.81,47.81,0,0,1-.42-6.58V31.5h10.85V72.23A25.21,25.21,0,0,0,325,81.47a13.73,13.73,0,0,0,5.43,6.61A17.3,17.3,0,0,0,340,90.5q6.17,0,9.9-2.66a14.62,14.62,0,0,0,5.36-7.14,26.18,26.18,0,0,0,1.19-8.47V31.5h10.85V72.37a47,47,0,0,1-.39,6.26A27.92,27.92,0,0,1,365.7,84a24.24,24.24,0,0,1-3.47,6.33,21.49,21.49,0,0,1-5.42,5,26.12,26.12,0,0,1-7.46,3.25A36.26,36.26,0,0,1,339.8,99.74Z"
+              />
+              <path
+                class="cls-1"
+                d="M481.25,96.24a1.61,1.61,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,7,7,0,0,1-1.75.42,24,24,0,0,1-2.8.14,24.67,24.67,0,0,1-2.87-.14,7.63,7.63,0,0,1-1.79-.42,2.21,2.21,0,0,1-.94-.67,1.54,1.54,0,0,1-.28-.94V58a34.87,34.87,0,0,0-.7-7.28A16.82,16.82,0,0,0,466.69,45a10.5,10.5,0,0,0-3.92-3.64,11.8,11.8,0,0,0-5.6-1.26,13.18,13.18,0,0,0-8,3.08,55.61,55.61,0,0,0-8.86,9v44a1.6,1.6,0,0,1-.27.94,2.25,2.25,0,0,1-.95.67,7.53,7.53,0,0,1-1.78.42,27.77,27.77,0,0,1-5.57,0,7.56,7.56,0,0,1-1.82-.42,1.93,1.93,0,0,1-.91-.67,1.75,1.75,0,0,1-.24-.94V58a32.2,32.2,0,0,0-.77-7.28A18.22,18.22,0,0,0,425.68,45a10.57,10.57,0,0,0-3.89-3.64,11.58,11.58,0,0,0-5.56-1.26,13.35,13.35,0,0,0-8.05,3.08,52.85,52.85,0,0,0-8.82,9v44a1.54,1.54,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,6.89,6.89,0,0,1-1.75.42,24.67,24.67,0,0,1-2.87.14,24,24,0,0,1-2.8-.14,7.53,7.53,0,0,1-1.78-.42,1.88,1.88,0,0,1-.91-.67,1.67,1.67,0,0,1-.25-.94v-63a2,2,0,0,1,.21-1,1.84,1.84,0,0,1,.84-.7,4.77,4.77,0,0,1,1.61-.42,25.76,25.76,0,0,1,2.59-.1c1,0,1.88,0,2.56.1a4.12,4.12,0,0,1,1.57.42,2.28,2.28,0,0,1,.81.7,1.76,1.76,0,0,1,.24,1v8.32a41.11,41.11,0,0,1,10.32-8.71,20.77,20.77,0,0,1,10.12-2.76,25,25,0,0,1,7,.91,18.68,18.68,0,0,1,5.5,2.55,17.19,17.19,0,0,1,4.06,3.92,23,23,0,0,1,2.8,5.07,65,65,0,0,1,6-5.81,36.18,36.18,0,0,1,5.46-3.84,22.13,22.13,0,0,1,5.11-2.14,19.35,19.35,0,0,1,5-.66,22.12,22.12,0,0,1,10.22,2.13,18.56,18.56,0,0,1,6.68,5.7,22.7,22.7,0,0,1,3.64,8.37,45.28,45.28,0,0,1,1.09,10.11Z"
+              />
+              <path
+                class="cls-2"
+                d="M237.59,83.29a1.54,1.54,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,6.89,6.89,0,0,1-1.75.42,24,24,0,0,1-2.8.14,24.67,24.67,0,0,1-2.87-.14,6.89,6.89,0,0,1-1.75-.42,2.23,2.23,0,0,1-.91-.67,1.54,1.54,0,0,1-.28-.94V46.4a36.32,36.32,0,0,0-.84-8.68,17.88,17.88,0,0,0-2.45-5.67,10.66,10.66,0,0,0-4.16-3.64,13.25,13.25,0,0,0-5.92-1.26A14.93,14.93,0,0,0,204,30.23a47.13,47.13,0,0,0-9.1,9v44a1.61,1.61,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,7,7,0,0,1-1.75.42,24.79,24.79,0,0,1-2.87.14,23.84,23.84,0,0,1-2.8-.14,7.63,7.63,0,0,1-1.79-.42,2,2,0,0,1-.91-.67,1.75,1.75,0,0,1-.24-.94v-63a2,2,0,0,1,.21-.94,1.84,1.84,0,0,1,.84-.7,4.71,4.71,0,0,1,1.61-.42,25,25,0,0,1,2.59-.11,25.29,25.29,0,0,1,2.55.11,4.18,4.18,0,0,1,1.58.42,2.16,2.16,0,0,1,.8.7,1.67,1.67,0,0,1,.25.94v8.33a38.7,38.7,0,0,1,10.6-8.71,22.83,22.83,0,0,1,10.67-2.76,23.8,23.8,0,0,1,10.61,2.13,19,19,0,0,1,7,5.7,22.79,22.79,0,0,1,3.82,8.37,49.73,49.73,0,0,1,1.15,11.51Z"
+              />
+              <path
+                class="cls-2"
+                d="M205.07,41.2a1.54,1.54,0,0,1,.28-.94,2.07,2.07,0,0,1,.91-.66,6.13,6.13,0,0,1,1.75-.42,21.84,21.84,0,0,1,2.8-.14,22.73,22.73,0,0,1,2.87.14,6.22,6.22,0,0,1,1.75.42,2.13,2.13,0,0,1,.91.66,1.61,1.61,0,0,1,.28.94V78a36.17,36.17,0,0,0,.84,8.67,18,18,0,0,0,2.44,5.66A10.74,10.74,0,0,0,224.07,96,13.18,13.18,0,0,0,230,97.25a14.93,14.93,0,0,0,8.68-3.08,46.67,46.67,0,0,0,9.1-9v-44a1.54,1.54,0,0,1,.28-.94,2.13,2.13,0,0,1,.91-.66,6.13,6.13,0,0,1,1.75-.42,22.62,22.62,0,0,1,2.87-.14,22,22,0,0,1,2.8.14,6.56,6.56,0,0,1,1.78.42,1.81,1.81,0,0,1,.91.66,1.67,1.67,0,0,1,.25.94v62.9a2,2,0,0,1-.21.94,1.84,1.84,0,0,1-.84.7,4.77,4.77,0,0,1-1.61.42,25.63,25.63,0,0,1-2.59.1c-1,0-1.88,0-2.55-.1a4.13,4.13,0,0,1-1.58-.42,2.16,2.16,0,0,1-.8-.7,1.67,1.67,0,0,1-.25-.94V95.78a38.64,38.64,0,0,1-10.6,8.7,22.84,22.84,0,0,1-10.68,2.76,23.75,23.75,0,0,1-10.6-2.13,19,19,0,0,1-7-5.7,22.53,22.53,0,0,1-3.82-8.35,49.61,49.61,0,0,1-1.15-11.49Z"
+              />
+              <path
+                class="cls-1"
+                d="M162.86,96.24a1.54,1.54,0,0,1-.28.94,2.16,2.16,0,0,1-.91.67,6.89,6.89,0,0,1-1.75.42,24.54,24.54,0,0,1-2.87.14,24,24,0,0,1-2.8-.14,7.53,7.53,0,0,1-1.78-.42,1.88,1.88,0,0,1-.91-.67,1.67,1.67,0,0,1-.25-.94v-63a1.71,1.71,0,0,1,.25-.91,1.74,1.74,0,0,1,.91-.7,6.66,6.66,0,0,1,1.78-.42,22,22,0,0,1,2.8-.14,22.52,22.52,0,0,1,2.87.14,6.13,6.13,0,0,1,1.75.42,2,2,0,0,1,.91.7,1.58,1.58,0,0,1,.28.91Z"
+              />
+              <path
+                class="cls-3"
+                d="M293.61,114.67c0,2.7-.52,4.53-1.54,5.51s-2.92,1.46-5.67,1.46-4.56-.47-5.57-1.43-1.5-2.75-1.5-5.4.51-4.53,1.54-5.5,2.91-1.47,5.67-1.47,4.56.48,5.56,1.43S293.61,112,293.61,114.67Z"
+              />
+              <path
+                class="cls-3"
+                d="M164.38,14.89c0,2.69-.52,4.53-1.54,5.5s-2.92,1.47-5.67,1.47-4.56-.48-5.57-1.43-1.5-2.75-1.5-5.4.51-4.53,1.54-5.51,2.91-1.46,5.67-1.46,4.56.48,5.56,1.43S164.38,12.24,164.38,14.89Z"
+              />
+            </svg>
+          </a>
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
+            <svg
+              class="w-8 h-8 text-[#E76F51]"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Desktop Navigation Menu -->
+          <nav
+            id="nav-menu"
+            class="hidden md:flex md:space-x-12 absolute md:relative top-16 md:top-auto left-0 w-full md:w-auto md:bg-transparent text-white md:flex-row flex-col items-center md:items-center md:space-x-12 md:p-0 p-4 transition-all duration-300 z-50"
+            style="font-family: 'Manrope', 'Open Sans', sans-serif"
+          >
+            <div class="relative group">
+              <a
+                href="#"
+                class="hover:text-gray-300 flex items-left transition duration-300"
+                >Products</a
+              >
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 mt-0 hidden group-hover:flex flex-col bg-[#ffffff] text-[#444444] shadow-lg w-72 py-2 text-left rounded transition-all duration-300 z-50"
+                style="margin-left: 89px"
+              >
+                <a
+                  href="4IG.html"
+                  class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300"
+                  >4iG®</a
+                >
+                <a
+                  href="hero_section/hero.html"
+                  class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300"
+                  >DataBreach™</a
+                >
+                <a
+                  href="#"
+                  class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300"
+                  >ObscurePI®</a
+                >
+              </div>
+            </div>
+
+            <div class="relative group">
+              <a
+                href="#"
+                class="hover:text-gray-300 flex items-center transition duration-300"
+                >Solutions</a
+              >
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 mt-0 hidden group-hover:flex flex-col bg-[#ffffff] text-[#444444] shadow-lg w-60 py-2 text-left rounded transition-all duration-300 z-50"
+                style="margin-left: 65px"
+              >
+                <a
+                  href="#"
+                  class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300"
+                  >Breach Response</a
+                >
+                <a
+                  href="#"
+                  class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300"
+                  >Unified Information Governance</a
+                >
+                <a
+                  href="#"
+                  class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition dration-300"
+                  >Data Protection/DSAR</a
+                >
+                <a
+                  href="#"
+                  class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300"
+                  >eDiscovery</a
+                >
+                <a
+                  href="#"
+                  class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300"
+                  >Automated Redaction</a
+                >
+                <a
+                  href="#"
+                  class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300"
+                  >Data Mapping</a
+                >
+                <a
+                  href="#"
+                  class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300"
+                  >Data Retention</a
+                >
+                <a
+                  href="#"
+                  class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300"
+                  >Unified Archival</a
+                >
+                <a
+                  href="#"
+                  class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300"
+                  >Data Disposition</a
+                >
+                <a
+                  href="#"
+                  class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300"
+                  >Legal Hold</a
+                >
+              </div>
+            </div>
+
+            <a href="product.html" class="hover:text-gray-300"
+              >Become a partner</a
+            >
+
+            <div class="relative group">
+              <a
+                href="#"
+                class="hover:text-gray-300 flex items-center transition duration-300"
+                >Resources</a
+              >
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 mt-0 hidden group-hover:flex flex-col bg-[#ffffff] text-[#444444] shadow-lg w-72 py-2 text-left rounded transition-all duration-300 z-50"
+                style="margin-left: 85px"
+              >
+                <a
+                  href="#"
+                  class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300"
+                  >News and Events</a
+                >
+                <a
+                  href="#"
+                  class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300"
+                  >Blog</a
+                >
+              </div>
+            </div>
+
+            <a href="#" class="hover:text-gray-300">About us</a>
+          </nav>
+
+          <a
+            href="4IG.html"
+            class="relative hidden md:flex border-[1.5px] border-[#E76F51] text-white px-6 py-2 rounded-3xl overflow-hidden transition-all duration-300 ease-in-out"
+            style="font-family: 'Manrope', 'Open Sans', sans-serif"
+          >
+            <span class="relative z-10"
+              >Contact<span class="ml-2 mb-1">→</span></span
+            >
+          </a>
+        </div>
+      </header>
+
+      <!-- Mobile Sidebar Menu (opens from right) -->
+      <div
+        id="mobile-sidebar"
+        class="mobile-sidebar fixed top-0 right-0 w-64 h-full bg-white shadow-lg transition-transform duration-300 z-50"
+      >
+        <!-- <button id="mobile-close-btn" class="p-4 text-[#E76F51] text-[xx-large] focus:outline-none">&times;</button> -->
+        <button id="mobile-close-btn" class="md:hidden focus:outline-none p-4">
+          <svg
+            class="w-8 h-8 text-[#E76F51]"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
         </button>
+        <nav class="mobile-nav p-4">
+          <!-- Dropdown: Products -->
+          <div class="mb-4">
+            <a
+              href="#"
+              class="dropdown-toggle flex items-center justify-between block py-2 text-gray-700 font-semibold"
+            >
+              <span>Products</span>
+              <svg
+                class="ml-1 w-4 h-4 text-[xx-large]"
+                fill="#E76F51"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+            <div class="dropdown-menu ml-4 hidden">
+              <a href="4IG.html" class="block py-1 text-gray-600">4iG®</a>
+              <a href="#" class="block py-1 text-gray-600">DataBreach™</a>
+              <a href="#" class="block py-1 text-gray-600">ObscurePI®</a>
+            </div>
+          </div>
+          <!-- Dropdown: Solutions -->
+          <div class="mb-4">
+            <a
+              href="#"
+              class="dropdown-toggle flex items-center justify-between block py-2 text-gray-700 font-semibold"
+            >
+              <span>Solutions</span>
+              <svg
+                class="ml-1 w-4 h-4"
+                fill="#E76F51"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+            <div class="dropdown-menu ml-4 hidden">
+              <a href="#" class="block py-1 text-gray-600">Breach Response</a>
+              <a href="#" class="block py-1 text-gray-600"
+                >Unified Information Governance</a
+              >
+              <a href="#" class="block py-1 text-gray-600"
+                >Data Protection/DSAR</a
+              >
+              <a href="#" class="block py-1 text-gray-600">eDiscovery</a>
+              <a href="#" class="block py-1 text-gray-600"
+                >Automated Redaction</a
+              >
+              <a href="#" class="block py-1 text-gray-600">Data Mapping</a>
+              <a href="#" class="block py-1 text-gray-600">Data Retention</a>
+              <a href="#" class="block py-1 text-gray-600">Unified Archival</a>
+              <a href="#" class="block py-1 text-gray-600">Data Disposition</a>
+              <a href="#" class="block py-1 text-gray-600">Legal Hold</a>
+            </div>
+          </div>
+          <!-- Become a partner (no dropdown) -->
+          <div class="mb-4">
+            <a
+              href="product.html"
+              class="block py-2 text-gray-700 font-semibold"
+              >Become a partner</a
+            >
+          </div>
+          <!-- Dropdown: Resources -->
+          <div class="mb-4">
+            <a
+              href="#"
+              class="dropdown-toggle flex items-center justify-between block py-2 text-gray-700 font-semibold"
+            >
+              <span>Resources</span>
+              <svg
+                class="ml-1 w-4 h-4"
+                fill="#E76F51"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+            <div class="dropdown-menu ml-4 hidden">
+              <a href="#" class="block py-1 text-gray-600">News and Events</a>
+              <a href="#" class="block py-1 text-gray-600">Blog</a>
+            </div>
+          </div>
+          <!-- About us (no dropdown) -->
+          <div>
+            <a href="#" class="block py-2 text-gray-700 font-semibold"
+              >About us</a
+            >
+          </div>
+        </nav>
       </div>
-    </div>
 
-    <!-- Spacer between blocks -->
-    <div class="mt-12"></div>
+      <!-- hero section -->
+      <section
+        class="relative h-screen flex items-center justify-center overflow-hidden bg-gray-900"
+        style="font-family: 'Manrope', 'Open Sans', sans-serif">
+        <!-- Content Container -->
+        <div class="relative z-10 text-center px-6 animate-fade">
+          <h1
+            class="mt-40 mb-14 text-3xl md:text-4xl font-extrabold text-white drop-shadow-lg"
+          >
+            Revolutionizing The Way You Interact With & Govern Data
+          </h1>
+          <div class="mt-6 justify-center">
+         <img src="images/4ig-product-dashboard-1.png"/>
+        </div>
+        </div>
+      </section>
 
-    <!-- Block #3: Image Right, Text Left -->
-    <div class="flex flex-col-reverse lg:flex-row items-center lg:space-x-8">
-      <!-- Left Column: Text -->
-      <div class="w-full lg:w-1/2 mt-8 lg:mt-0">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Revolutionizing The Way You Interact & Govern Data
-        </h2>
-        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
-          Current IG solutions, ranging from file shares to IRM applications, 
-          often repurpose older capabilities for basic GRC. They have limited 
-          connectors and require data collection before action, leading to 
-          inefficiencies in eDiscovery “hand-offs.” We believe this traditional 
-          data management approach is fundamentally flawed and in need of 
-          modernization.
-        </p>
-        <!-- Example bullet list (adjust to your actual content) -->
-        <ul class="mt-4 space-y-2 list-disc list-inside text-gray-700">
-          <li>Flexible Deployment Options</li>
-          <li>Structured & Unstructured</li>
-          <li>Robust Privacy Framework</li>
-          <li>Built-In Solutions</li>
-          <li>Template-Based Automation</li>
-          <li>Intelligently Reduce Risk</li>
-        </ul>
-        <button 
-          type="button" 
-          class="mt-6 inline-block bg-red-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-red-600 transition-colors"
+      <!-- what is 4iG  -->
+      <section class="bg-[#EAF4F2] opacity-0 animate-fade">
+        <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-gray-900 text-center">
+            4iG<sup>®</sup>
+          </h2>
+          <p class="mt-4 max-w-3xl mx-auto text-center text-gray-700">
+            Experience a revolution in data management with Infinnium’s 4iG®
+            platform. Built to tackle modern data challenges head-on, 4iG® is an
+            advanced technology solution that empowers organizations to manage
+            their data in place, eliminating risk and outdated workflows. Our
+            game-changing platform natively integrates seamlessly with
+            enterprise data and leverages artificial intelligence to identify,
+            classify, and categorize data in real time. 4iG® doesn’t change how
+            you work with your data; it enhances it significantly, allowing you
+            to navigate today’s vast and complex data landscape with
+            unparalleled efficiency and precision.
+          </p>
+
+          <div
+            class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
+            <div class="bg-white p-6 rounded-lg shadow feature-card">
+              <div class="text-[#E76F51]">
+                <svg
+                  class="w-12 h-12 mx-auto"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 20l9-5-9-5-9 5 9 5z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 12l9-5-9-5-9 5 9 5z"
+                  />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-xl font-semibold text-gray-800 text-center">
+                Connect
+              </h3>
+              <p class="mt-2 text-gray-600 text-center">
+                Connect directly to both structured and unstructured data. With
+                over 50 data connectors and the option for custom builds per
+                client request, Infinnium provides the capability to index, OCR
+                and process data in place.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow feature-card">
+              <div class="text-[#E76F51]">
+                <svg
+                  class="w-12 h-12 mx-auto"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M11 17l-5-5m0 0l5-5m-5 5h12"
+                  />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-xl font-semibold text-gray-800 text-center">
+                Analyze
+              </h3>
+              <p class="mt-2 text-gray-600 text-center">
+                Artificial intelligence technology is leveraged to classify the
+                data while enabling analysis that reveals patterns, behavior and
+                key insights on a mass scale.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow feature-card">
+              <div class="text-[#E76F51]">
+                <svg
+                  class="w-12 h-12 mx-auto"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 17v-6a2 2 0 114 0v6m-4-6a2 2 0 00-4 0v6m8-6a2 2 0 014 0v6"
+                  />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-xl font-semibold text-gray-800 text-center">
+                Organize
+              </h3>
+              <p class="mt-2 text-gray-600 text-center">
+                4iG® delivers unprecedented visibility into data by capturing
+                and organizing it into a unified repository, Enabling you to
+                solve today’s data challenges.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow feature-card">
+              <div class="text-[#E76F51]">
+                <svg
+                  class="w-12 h-12 mx-auto"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-xl font-semibold text-gray-800 text-center">
+                Act
+              </h3>
+              <p class="mt-2 text-gray-600 text-center">
+                Corporations, law firms and service providers are able to glean
+                insights, proactively mitigate risk, and transform governance
+                with game-changing accuracy, efficiency, and cost savings.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- photo and description -->
+      <section class="max-w-screen-xl mx-auto px-4 py-12 lg:py-20">
+        <!-- Block #1: Image Right, Text Left -->
+        <div
+          class="flex flex-col-reverse lg:flex-row items-center lg:space-x-8"
         >
-          View Details
-        </button>
-      </div>
-      <!-- Right Column: Image -->
-      <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
-        <!-- Replace IMAGE_URL_3 with your actual third image source -->
-        <img 
-          src="images/product-4ig3.png" 
-          alt="Revolutionizing Data Interaction"
-          class="w-full h-auto max-w-md lg:max-w-none"
-        />
-      </div>
-    </div>
+          <!-- Left Column: Text -->
+          <div class="w-full lg:w-1/2 mt-8 lg:mt-0">
+            <h1 class="text-3xl md:text-4xl font-bold text-[#E76F51] mb-4">
+              A Single Source Of Truth For All.
+            </h1>
+            <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+              A single source of truth (SSOT) is a crucial strategy in ensuring
+              data integrity, consistency, and accessibility across an
+              organization. By centralizing data into one authoritative
+              repository, organizations can mitigate the risks associated with
+              data silos, where disparate systems and databases hold conflicting
+              or outdated information.
+            </p>
+            <p class="mt-4 text-base md:text-lg text-gray-700 leading-relaxed">
+              SSOT enhances decision-making by providing stakeholders with
+              reliable and up-to-date data, reducing transparency and trust. It
+              also streamlines compliance with regulatory requirements by
+              maintaining a comprehensive, auditable trail of data activities.
+              In essence, SSOT is a foundational element in modern information
+              governance, driving efficiency, reducing redundancy, and enabling
+              robust data privacy and security measures.
+            </p>
+          </div>
+          <!-- Right Column: Image -->
+          <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
+            <!-- Replace with your actual image source -->
+            <img
+              src="images/product-4ig1.png"
+              alt="Dashboard Preview"
+              class="w-full h-auto max-w-md lg:max-w-none"
+            />
+          </div>
+        </div>
 
-  </section>
-  <!-- Overview Section -->
-  <section id="overview" class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 animate-fade">
-    <div>
-        <h2 class="text-4xl font-bold text-indigo-600">What is 4iG®?</h2>
-        <p class="mt-4 text-gray-600 leading-relaxed">
-            The 4iG® platform is designed to seamlessly integrate, analyze, and manage enterprise data. 
-            It provides **AI-powered insights, automation, and governance tools** to help organizations maintain compliance and optimize operations.
+        <!-- Spacer between blocks -->
+        <div class="mt-12"></div>
+
+        <!-- Block #2: Image Left, Text Right -->
+        <div class="flex flex-col lg:flex-row items-center lg:space-x-8">
+          <!-- Left Column: Image -->
+          <div class="w-full lg:w-1/2 flex justify-center lg:justify-start">
+            <!-- Replace IMAGE_URL_2 with your actual second image source -->
+            <img
+              src="images/product-4ig2.png"
+              alt="Reduce The Data Under Management Budget"
+              class="w-full h-auto max-w-md lg:max-w-none"
+            />
+          </div>
+          <!-- Right Column: Text -->
+          <div class="w-full lg:w-1/2 mt-8 lg:mt-0">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#E76F51] mb-4">
+              Reduce The Data Under Management Budget... <br />
+              Or As We Call It, The DUMB!
+            </h2>
+            <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+              Reducing ROT (Redundant, Obsolete, and Trivial) data not only
+              mitigates risks and costs but also positions an organization for
+              next-generation digital transformation. Infinium’s 6R™ software
+              platform is specifically designed to tackle these challenges by
+              managing data in its existing locations, avoiding unnecessary
+              duplication. By identifying and intelligently reducing ROT, 6R™
+              ensures smarter data management aligned with compliance
+              requirements, paving the way for enhanced digital capabilities and
+              efficiencies.
+            </p>
+            <button class="common w-[11rem] h-[2.75rem] mt-[2rem]">
+              <span>Get In Touch <spann class="text-lg ml-2">→</spann></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Spacer between blocks -->
+        <div class="mt-12"></div>
+
+        <!-- Block #3: Image Right, Text Left -->
+        <div
+          class="flex flex-col-reverse lg:flex-row items-center lg:space-x-8"
+        >
+          <!-- Left Column: Text -->
+          <div class="w-full lg:w-1/2 mt-8 lg:mt-0">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#E76F51] mb-4">
+              Revolutionizing The Way You Interact & Govern Data
+            </h2>
+            <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+              Current IG solutions, ranging from file shares to IRM
+              applications, often repurpose older capabilities for basic GRC.
+              They have limited connectors and require data collection before
+              action, leading to inefficiencies in eDiscovery “hand-offs.” We
+              believe this traditional data management approach is fundamentally
+              flawed and in need of modernization.
+            </p>
+            <!-- Example bullet list (adjust to your actual content) -->
+            <ul class="mt-4 space-y-2 list-disc list-inside text-gray-700">
+              <li>Flexible Deployment Options</li>
+              <li>Structured & Unstructured</li>
+              <li>Robust Privacy Framework</li>
+              <li>Built-In Solutions</li>
+              <li>Template-Based Automation</li>
+              <li>Intelligently Reduce Risk</li>
+            </ul>
+            <button class="common w-[11rem] h-[2.75rem] mt-[2rem]">
+              <span>Get In Touch <spann class="text-lg ml-2">→</spann></span>
+            </button>
+          </div>
+          <!-- Right Column: Image -->
+          <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
+            <!-- Replace IMAGE_URL_3 with your actual third image source -->
+            <img
+              src="images/product-4ig3.png"
+              alt="Revolutionizing Data Interaction"
+              class="w-full h-auto max-w-md lg:max-w-none"
+            />
+          </div>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1" data-aos="fade-up" data-aos-duration="800">
+          <div class="w-full h-[1px] bg-[#9BAAB0]"></div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 text-center mr-8">
+          <div data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-3xl font-bold text-gray-900 count-up" data-count="50">0 +</h3>
+            <p class="text-[#E76F51]">Data Connectors</p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="300">
+            <h3 class="text-3xl font-bold text-gray-900 count-up" data-count="600">0+</h3>
+            <p class="text-[#E76F51]">PXI Definitions</p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="400">
+            <h3 class="text-3xl font-bold text-gray-900 count-up" data-count="1500">0 +</h3>
+            <p class="text-[#E76F51]">Retention Policies</p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="500">
+            <h3 class="text-3xl font-bold text-gray-900 count-up" data-count="10">0 +</h3>
+            <p class="text-[#E76F51]">Data Under Management <span class="text-sm">(Pbs)</span></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Advantages Section -->
+      <section class="bg-[#12423C] text-white py-16 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+          <h2 class="text-4xl font-bold mb-12">Advantages</h2>
+      
+          <div class="grid grid-cols-4 gap-x-0 gap-y-16">
+            <!-- Row 1: 4 items -->
+            <div class="flex flex-col items-center space-y-3 group transition-all duration-300 hover:-translate-y-2 hover:text-[#FFB400]">
+              <div class="text-5xl transition-all duration-300 group-hover:scale-110">
+                <img src="images/Automate-Manual-Processes.png" />
+              </div>
+            </div>
+      
+            <div class="flex flex-col items-center space-y-3 group transition-all duration-300 hover:-translate-y-2 hover:text-[#FFB400]">
+              <div class="text-5xl transition-all duration-300 group-hover:scale-110">
+                <img src="images/Mitigate-Risk-1.png"/>
+              </div>
+            </div>
+      
+            <div class="flex flex-col items-center space-y-3 group transition-all duration-300 hover:-translate-y-2 hover:text-[#FFB400]">
+              <div class="text-5xl transition-all duration-300 group-hover:scale-110">
+              <img src="images/Reduce-Cost-1.png"/>
+              </div>
+            </div>
+      
+            <div class="flex flex-col items-center space-y-3 group transition-all duration-300 hover:-translate-y-2 hover:text-[#FFB400]">
+              <div class="text-5xl transition-all duration-300 group-hover:scale-110">
+                <img src="images/Save-Time-1.png"/>
+              </div>
+            </div>
+            </div>
+
+      
+            <!-- Row 2 -->
+            <div class="grid grid-cols-3 gap-x-0 gap-y-10">
+
+            <div class="flex flex-col items-center space-y-3 group transition-all duration-300 hover:-translate-y-2 hover:text-[#FFB400] col-span-1 mx-auto"
+            >
+              <div class="text-5xl transition-all duration-300 group-hover:scale-110">
+                <img src="images/Single-Source-of-Truth-1.png"/>
+              </div>
+            </div>
+      
+            <div class="flex flex-col items-center space-y-3 group transition-all duration-300 hover:-translate-y-2 hover:text-[#FFB400] col-span-1 mx-auto">
+              <div class="text-5xl transition-all duration-300 group-hover:scale-110">
+                <img src="images/Stay-Ahead-of-Regulations-1.png"/>  
+              </div>
+            </div>
+      
+            <div class="flex flex-col items-center space-y-3 group transition-all duration-300 hover:-translate-y-2 hover:text-[#FFB400] col-span-1 mx-auto"
+            
+              <div class="text-5xl transition-all duration-300 group-hover:scale-110">
+                <img src="images/Streamline-Operations-1.png"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      <!-- Features section -->
+      <section class="bg-[#EAF4F2] text-[#12423C] py-16 px-6 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <h2 class="text-4xl font-bold mb-20 tracking-wide text-center">
+            Features
+          </h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-24 md:gap-20 sm:gap-12">
+            <!-- Feature Item 1 -->
+            <div class="space-y-4 sm:flex sm:items-start sm:gap-4 text-left">
+              <div class="w-16 h-16 flex-shrink-0">
+                <img src="images/unified-data-repository.png" alt="">
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">Unified Data Repository</h3>
+                <button onclick="toggleDescription(1)" class="text-[#E76F51] hover:text-[#E65A4E] font-medium mt-3 inline-block hover:underline">
+                  Read More →
+                </button>
+                <p id="desc-1" class="text-#12423C mt-2 hidden">
+                  Seamlessly integrates data from multiple sources, unlocking
+                  valuable insights and enabling informed decision-making. Creates
+                  a cohesive and comprehensive view of your organization's
+                  information landscape. Ensuring that data is accessible, and
+                  actionable.                </p>
+              </div>
+            </div>
+
+            <!-- Feature Item 2 -->
+            <div class="space-y-4 sm:flex sm:items-start sm:gap-4 text-left">
+              <div class="w-16 h-16 flex-shrink-0">
+                <img src="images/information-transformation.png" alt="">
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">Information Transformation</h3>
+                <button onclick="toggleDescription(2)" class="text-[#E76F51] hover:text-[#E65A4E] font-medium mt-3 inline-block hover:underline">
+                  Read More →
+                </button>
+                <p id="desc-2" class="text-#12423C mt-2 hidden">
+                  Converting raw, disconnected data into meaningful insights and
+                  actionable intelligence. Using advanced analytics, data
+                  cleansing, and visualization techniques, 4iG® empowers
+                  organizations to derive valuable insights, make informed
+                  decisions, and drive business growth.                </p>
+              </div>
+            </div>
+
+            <!-- Feature Item 3 -->
+            <div class="space-y-4 sm:flex sm:items-start sm:gap-4 text-left">
+              <div class="w-16 h-16 flex-shrink-0">
+                <img src="images/on-premise-or-in-the-cloud.png" alt="">
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">On-Premise Or In The Cloud</h3>
+                <button onclick="toggleDescription(3)" class="text-[#E76F51] hover:text-[#E65A4E] font-medium mt-3 inline-block hover:underline">
+                  Read More →
+                </button>
+                <p id="desc-3" class="text-#12423C mt-2 hidden">
+                  4iG®’s suite of applications offers flexible deployment options,
+                  allowing you to choose between on-premises installation or
+                  cloud-based deployment. Whether you prefer the control and
+                  security of hosting your software on-site or the scalability and
+                  accessibility of the cloud, our solutions cater to meet our
+                  client’s requirements.                </p>
+              </div>
+            </div>
+
+            <!-- Feature Item 4 -->
+            <div class="space-y-4 sm:flex sm:items-start sm:gap-4 text-left">
+              <div class="w-16 h-16 flex-shrink-0">
+                <img src="images/cohesive-search-discovery.png" alt="">
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">Cohesive Search & Discovery</h3>
+                <button onclick="toggleDescription(4)" class="text-[#E76F51] hover:text-[#E65A4E] font-medium mt-3 inline-block hover:underline">
+                  Read More →
+                </button>
+                <p id="desc-4" class="text-[#12423C] mt-2 hidden">
+                  Effortlessly navigate vast volumes of data, gain comprehensive
+                  insights, and streamline collaboration with advanced search
+                  capabilities and robust analytics tools. Scalable, secure, and
+                  intuitive, our platform empowers legal professionals to uncover
+                  actionable insights and achieve unparalleled efficiency in their
+                  legal operations.                </p>
+              </div>
+            </div>
+
+            <!-- Feature Item 5 -->
+            <div class="space-y-4 sm:flex sm:items-start sm:gap-4 text-left">
+              <div class="w-16 h-16 flex-shrink-0">
+                <img src="images/powerful-visualizations.png" alt="">
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">Powerful Visualizations</h3>
+                <button onclick="toggleDescription(5)" class="text-[#E76F51] hover:text-[#E65A4E] font-medium mt-3 inline-block hover:underline">
+                  Read More →
+                </button>
+                <p id="desc-5" class="text-[#12423C] mt-2 hidden">
+                  With our powerful interactive charts and graphs, users are able
+                  to explore and analyze vast volumes of data with ease. Navigate
+                  through complex data sets effortlessly, gaining deeper insights
+                  into your data by uncovering key trends, relationships, and
+                  anomalies                </p>
+              </div>
+            </div>
+
+            <!-- Feature Item 6 -->
+            <div class="space-y-4 sm:flex sm:items-start sm:gap-4 text-left">
+              <div class="w-16 h-16 flex-shrink-0">
+                <img src="images/third-party-integrations.png" alt="">
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">Third-Party Integrations</h3>
+                <button onclick="toggleDescription(6)" class="text-[#E76F51] hover:text-[#E65A4E] font-medium mt-3 inline-block hover:underline">
+                  Read More →
+                </button>
+                <p id="desc-6" class="text-[#12423C] mt-2 hidden">
+                  No more manual data extractions - whether it's emails,
+                  documents, social media, or cloud-based repositories, 4iG®
+                  enables you to connect to your data wherever it resides. With
+                  robust connectors using enhanced APIs, accessing data from
+                  third-party systems is effortless. 4iG® platform automates data
+                  retrieval processes and streamlines data analysis, enabling you
+                  to focus on the task at hand – uncovering insights and building
+                  your case.
+                </p>
+              </div>
+            </div>
+      
+
+            <!-- New Feature Item 7 -->
+            <div class="space-y-4 sm:flex sm:items-start sm:gap-4 text-left">
+              <div class="w-16 h-16 flex-shrink-0">
+                <img src="images/actionable-intelligence.png" alt="">
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">Actionable Intelligence</h3>
+                <button onclick="toggleDescription(7)" class="text-[#E76F51] hover:text-[#E65A4E] font-medium mt-3 inline-block hover:underline">
+                  Read More →
+                </button>
+                <p id="desc-7" class="text-[#12423C] mt-2 hidden">
+                  4iG® has a suite of powerful tools and features designed to
+                  extract maximum value from your data. From indexing and
+                  searching data in place, predictive analytics, PXI detection,
+                  sentiment analysis, entity recognition., 4iG® delivers
+                  actionable insights that matter. Our platform goes beyond
+                  traditional processes such as over collecting. We offer
+                  actionable intelligence that transforms raw, disassociated
+                  information into strategic assets. With advanced analytics and
+                  machine learning capabilities, we empower legal professionals to
+                  uncover hidden patterns, trends, and relationships within their
+                  data, driving impactful decisions and achieving favorable legal
+                  outcomes.                </p>
+              </div>
+            </div>  
+
+            <!-- New Feature Item 8 -->
+            <div class="space-y-4 sm:flex sm:items-start sm:gap-4 text-left">
+              <div class="w-16 h-16 flex-shrink-0">
+                <img src="images/comprehensive-audit-reporting.png" alt="">
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">Comprehensive Audit & Reporting</h3>
+                <button onclick="toggleDescription(8)" class="text-[#E76F51] hover:text-[#E65A4E] font-medium mt-3 inline-block hover:underline">
+                  Read More →
+                </button>
+                <p id="desc-8" class="text-[#12423C] mt-2 hidden">
+                  Our Comprehensive Audit & Reporting solutions, track every
+                  action taken within your platform, ensuring complete visibility
+                  into data handling processes. From data ingestion and processing
+                  to reviewer analysis and production, our platform captures every
+                  interaction, providing a detailed audit trail of data access,
+                  modifications, and deletions.                </p>
+              </div>
+            </div>
+
+            <!-- New Feature Item 9 -->
+            <div class="space-y-4 sm:flex sm:items-start sm:gap-4 text-left">
+              <div class="w-16 h-16 flex-shrink-0">
+                <img src="images/tag-track-and-secure.png" alt="">
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">Tag, Track, and Secure</h3>
+                <button onclick="toggleDescription(9)" class="text-[#E76F51] hover:text-[#E65A4E] font-medium mt-3 inline-block hover:underline">
+                  Read More →
+                </button>
+                <p id="desc-9" class="text-[#12423C] mt-2 hidden">
+                  Identifying and categorizing sensitive data is essential for
+                  compliance and security. 4iG offers effortless tagging
+                  capabilities, enabling organizations to label data with custom
+                  tags, metadata, and classifications. With intuitive tagging
+                  features such as within a group or batch or across entire data
+                  set, ensures sensitive information is properly identified and
+                  managed throughout its lifecycle. 4iG® provides comprehensive
+                  tracking mechanisms that monitor data access, modifications, and
+                  sharing activities in real-time. From user activity logs to
+                  audit trails, gain visibility into every interaction with your
+                  data, ensuring compliance with regulatory requirements and
+                  internal policies.                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trusted Leaders -->
+      <section
+        class="py-16 px-6 md:px-16 lg:px-24 text-center bg-[#12423C] text-white"
+        style="font-family: 'Manrope', 'Open Sans', sans-serif"
+      >
+        <!-- Section Header -->
+        <p class="text-sm uppercase tracking-widest text-gray-300">
+          YOU ARE WITH A GOOD COMPANY
         </p>
-        <ul class="mt-6 space-y-3">
-            <li class="flex items-start"><span class="text-green-500 text-2xl mr-3">✔</span> AI-powered data classification</li>
-            <li class="flex items-start"><span class="text-green-500 text-2xl mr-3">✔</span> Secure automation for governance</li>
-            <li class="flex items-start"><span class="text-green-500 text-2xl mr-3">✔</span> Advanced risk mitigation techniques</li>
-        </ul>
-    </div>
-    <div class="flex items-center justify-center">
-        <img src="images/solution-web-banner.webp" alt="Data governance illustration" class="rounded-lg shadow-lg">
-    </div>
-</section>
-
-  <!-- Features Section -->
-  
-
-  <section class="bg-white py-16">
-    <div class="max-w-7xl mx-auto px-4">
-      <!-- Section Header -->
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
-          4iG<sup>®</sup>
+        <h2 class="text-4xl font-semibold mt-2">
+          Trusted <span class="italic text-gray-300">Leader</span>
         </h2>
-        <p class="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
-          Experience a revolution in data management with Infinnium’s 4iG® platform. Built to tackle modern data challenges head-on, 4iG® is an advanced technology solution that empowers organizations to manage their data in place, eliminating risk and outdated workflows. Our game-changing platform natively integrates seamlessly with enterprise data and leverages artificial intelligence to identify, classify, and categorize data in real time. 4iG® doesn’t change how you work with your data; it enhances it significantly, allowing you to navigate today’s vast and complex data landscape with unparalleled efficiency and precision.
-        </p>
-      </div>
-      <!-- Cards Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Connect Card -->
-        <div class="bg-gray-50 border border-gray-200 p-8 rounded-xl shadow-lg transition transform hover:scale-105">
-          <div class="mx-auto w-20 h-20 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-orange-400 mb-6">
-            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-5-9-5-9 5 9 5z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12l9-5-9-5-9 5 9 5z"/>
-            </svg>
+
+        <!-- Certification Badges -->
+        <div
+          class="mt-10 flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-16 lg:gap-24"
+        >
+          <!-- Badge 1 -->
+          <div
+            class="bg-white p-2 h-24 rounded-lg shadow-lg w-72 flex justify-center"
+          >
+            <img src="images/leader1.png" alt="ISO 27701 Certification" />
           </div>
-          <h3 class="text-2xl font-semibold text-gray-800 text-center">Connect</h3>
-          <p class="mt-4 text-gray-600 text-center text-sm">
-            Connect directly to both structured and unstructured data. With over 50 data connectors and the option for custom builds per client request, Infinnium provides the capability to index, OCR and process data in place.
-          </p>
-        </div>
-        <!-- Analyze Card -->
-        <div class="bg-gray-50 border border-gray-200 p-8 rounded-xl shadow-lg transition transform hover:scale-105">
-          <div class="mx-auto w-20 h-20 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-orange-400 mb-6">
-            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12"/>
-            </svg>
+
+          <!-- Badge 2 -->
+          <div
+            class="bg-white p-2 h-24 rounded-lg shadow-lg w-72 flex justify-center"
+          >
+            <img src="images/leader2.png" alt="ISO 9001 Certification" />
           </div>
-          <h3 class="text-2xl font-semibold text-gray-800 text-center">Analyze</h3>
-          <p class="mt-4 text-gray-600 text-center text-sm">
-            Artificial intelligence technology is leveraged to classify the data while enabling analysis that reveals patterns, behavior and key insights on a mass scale.
-          </p>
-        </div>
-        <!-- Organize Card -->
-        <div class="bg-gray-50 border border-gray-200 p-8 rounded-xl shadow-lg transition transform hover:scale-105">
-          <div class="mx-auto w-20 h-20 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-orange-400 mb-6">
-            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6a2 2 0 114 0v6m-4-6a2 2 0 00-4 0v6m8-6a2 2 0 014 0v6"/>
-            </svg>
+
+          <!-- Badge 3 -->
+          <div
+            class="bg-white p-2 h-24 rounded-lg shadow-lg w-72 flex justify-center"
+          >
+            <img src="images/leader3.png" alt="ISO 27001 Certification" />
           </div>
-          <h3 class="text-2xl font-semibold text-gray-800 text-center">Organize</h3>
-          <p class="mt-4 text-gray-600 text-center text-sm">
-            4iG® delivers unprecedented visibility into data by capturing and organizing it into a unified repository, enabling you to solve today’s data challenges.
-          </p>
         </div>
-        <!-- Act Card -->
-        <div class="bg-gray-50 border border-gray-200 p-8 rounded-xl shadow-lg transition transform hover:scale-105">
-          <div class="mx-auto w-20 h-20 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-orange-400 mb-6">
-            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-            </svg>
-          </div>
-          <h3 class="text-2xl font-semibold text-gray-800 text-center">Act</h3>
-          <p class="mt-4 text-gray-600 text-center text-sm">
-            Corporations, law firms and service providers are able to glean insights, proactively mitigate risk, and transform governance with game-changing accuracy, efficiency, and cost savings.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  
-  
-  
-  <!-- Benefits Section -->
-<section class="bg-white px-6 py-16">
-  <div class="max-w-7xl mx-auto text-center">
-    <h2 class="text-4xl font-bold text-indigo-600">Why Choose 4iG®?</h2>
-    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
-      Unlock the full potential of your data with cutting-edge technology and innovative governance solutions that empower your organization.
-    </p>
-  </div>
-  <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12">
-    <!-- Benefits List -->
-    <div class="space-y-8">
-      <div class="flex items-start">
-        <div class="flex-shrink-0">
-          <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <div class="ml-4">
-          <h3 class="text-2xl font-semibold">Single Source of Truth</h3>
-          <p class="mt-2 text-gray-600">
-            Consolidate all your critical data into one authoritative repository to eliminate duplication and ensure consistency.
-          </p>
-        </div>
-      </div>
-      <div class="flex items-start">
-        <div class="flex-shrink-0">
-          <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <div class="ml-4">
-          <h3 class="text-2xl font-semibold">Automated Workflows</h3>
-          <p class="mt-2 text-gray-600">
-            Streamline manual processes with advanced AI-driven automation, saving time and reducing operational costs.
-          </p>
-        </div>
-      </div>
-      <div class="flex items-start">
-        <div class="flex-shrink-0">
-          <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <div class="ml-4">
-          <h3 class="text-2xl font-semibold">Risk Mitigation</h3>
-          <p class="mt-2 text-gray-600">
-            Proactively identify and mitigate potential risks, ensuring compliance and safeguarding your enterprise.
-          </p>
-        </div>
-      </div>
-      <div class="flex items-start">
-        <div class="flex-shrink-0">
-          <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <div class="ml-4">
-          <h3 class="text-2xl font-semibold">Cost Efficiency</h3>
-          <p class="mt-2 text-gray-600">
-            Optimize resources and reduce expenses by eliminating redundancies and leveraging data-driven insights.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- Illustration/Image -->
-    <div class="flex items-center justify-center">
-      <img src="images/razvan-chisu-Ua-agENjmI4-unsplash.jpg" alt="Benefits Illustration" class="rounded-lg shadow-lg">
-    </div>
-  </div>
-  <!-- Testimonial -->
-  <div class="max-w-7xl mx-auto mt-12 px-6">
-    <div class="bg-indigo-50 p-8 rounded-lg shadow-md">
-      <h3 class="text-2xl font-bold text-indigo-600 text-center">What Our Clients Say</h3>
-      <p class="mt-4 text-gray-600 text-center">
-        "4iG® has transformed our data management strategy. With a unified, efficient, and secure system, we save time and make smarter decisions."
-      </p>
-      <p class="mt-4 text-gray-800 font-semibold text-center">- John Doe, CTO</p>
-    </div>
-  </div>
-</section>
+      </section>
 
+      <section
+        class="relative bg-[#E76F51] text-white flex justify-center items-center h-[220px] sm:h-[260px] md:h-[300px] lg:h-[350px] px-4 sm:px-6"
+        style="font-family: 'Manrope', 'Open Sans', sans-serif"
+      >
 
-  <!-- Data Optimization Section -->
-  <section class="bg-gray-900 text-white px-6 py-16">
-    <div class="max-w-7xl mx-auto text-center">
-        <h2 class="text-4xl font-bold">Optimizing Data with AI</h2>
-        <p class="mt-4 text-gray-400">Reduce redundant, obsolete, and trivial (DUMB) data.</p>
-    </div>
-    <div class="mt-12 flex justify-center">
-        <img src="images/Data-Protection-1288x724-1.webp" alt="Data Optimization" class="rounded-lg shadow-lg">
-    </div>
-</section>
-
- <!-- Trusted Leaders -->
- <section class="py-16 px-6 md:px-16 lg:px-24 text-center bg-[#12423C] text-white"
- style="font-family: 'Manrope', 'Open Sans', sans-serif">
- <!-- Section Header -->
- <p class="text-sm uppercase tracking-widest text-gray-300">
-   YOU ARE WITH A GOOD COMPANY
- </p>
- <h2 class="text-4xl font-semibold mt-2">
-   Trusted <span class="italic text-gray-300">Leader</span>
- </h2>
-
- <!-- Certification Badges -->
- <div class="mt-10 flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-16 lg:gap-24">
-   <!-- Badge 1 -->
-   <div class="bg-white p-2 h-24 rounded-lg shadow-lg w-72 flex justify-center">
-     <img src="images/leader1.png" alt="ISO 27701 Certification" />
-   </div>
- 
-   <!-- Badge 2 -->
-   <div class="bg-white p-2 h-24 rounded-lg shadow-lg w-72 flex justify-center">
-     <img src="images/leader2.png" alt="ISO 9001 Certification" />
-   </div>
- 
-   <!-- Badge 3 -->
-   <div class="bg-white p-2 h-24 rounded-lg shadow-lg w-72 flex justify-center">
-     <img src="images/leader3.png" alt="ISO 27001 Certification" />
-   </div>
- </div>      
-</section>
-
-  <!-- Contact Section -->
-  <!-- <section class="bg-white opacity-0 animate-section">
-    <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold text-gray-900">Contact Us</h2>
-      <p class="mt-4 text-gray-600">
-        Reach out to Infinnium for more information or to schedule a demo of the 4iG® platform.
-      </p>
-      <div class="mt-8">
-        <a href="mailto:contact@infinnium.com" class="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-md shadow hover:bg-indigo-700 transition">
-          Get in Touch
-        </a>
-      </div>
-    </div>
-  </section> -->
-  <section class="relative bg-[#E76F51] text-white flex justify-center items-center h-[220px] sm:h-[260px] md:h-[300px] lg:h-[350px] px-4 sm:px-6"
-  style="font-family: 'Manrope', 'Open Sans', sans-serif">
-  
-  <!-- Background Animation Canvas -->
-  <canvas id="particles" class="absolute top-0 left-0 w-full h-full"></canvas>
-
-  <!-- Section Content -->
-  <div class="relative flex flex-col sm:flex-row justify-between items-center w-full max-w-6xl px-4 sm:px-6 z-10">
-    
-    <!-- Heading -->
-    <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-center sm:text-left mb-4 sm:mb-0 text-white" style="font-family: 'Manrope', 'Open Sans', sans-serif;">
-      Want to see it in action? 
-      <!-- <span class="block text-lg sm:text-xl md:text-lg  mt-2 text-white" style="font-family: 'Manrope', 'Open Sans', sans-serif;">
+        <!-- Section Content -->
+        <div
+          class="relative flex flex-col sm:flex-row justify-between items-center w-full max-w-6xl px-4 sm:px-6 z-10"
+        >
+          <!-- Heading -->
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl font-semibold text-center sm:text-left mb-4 sm:mb-0 text-white"
+            style="font-family: 'Manrope', 'Open Sans', sans-serif"
+          >
+            Want to see it in action?
+            <!-- <span class="block text-lg sm:text-xl md:text-lg  mt-2 text-white" style="font-family: 'Manrope', 'Open Sans', sans-serif;">
         Reach out to Infinnium for more information or to schedule a demo of the 4iG® platform.
       </span> -->
-    </h2>
-    
-    
-    <!-- Button -->
-    <button class="expert hover:text-[#000] font-medium rounded-full transition-all duration-300
-      flex items-center justify-center w-[10rem] h-[2.75rem] sm:w-[11rem] sm:h-[3rem] md:w-[12rem] md:h-[3.25rem] mt-4 sm:mt-0">
-      <span>Get In Touch <span class="text-lg ml-2">→</span></span>
-    </button>
+          </h2>
 
-  </div>
-</section>
-  <!-- Footer -->
-  <footer class="bg-[#f6f9fb] text-white py-10 px-6 md:px-20" style="font-family: 'Manrope', 'Open Sans', sans-serif">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Logo & Subscription -->
-      <div>
-        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 481.25 121.64"
-          style="width: 227px;">
-          <defs>
-            <style>
-              .cls-1 {
-                fill: #264653;
-              }
+          <!-- Button -->
+          <button
+            class="expert hover:text-[#000] font-medium rounded-full transition-all duration-300 flex items-center justify-center w-[10rem] h-[2.75rem] sm:w-[11rem] sm:h-[3rem] md:w-[12rem] md:h-[3.25rem] mt-4 sm:mt-0"
+          >
+            <span>Get In Touch <span class="text-lg ml-2">→</span></span>
+          </button>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer
+        class="bg-[#f6f9fb] text-white py-10 px-6 md:px-20"
+        style="font-family: 'Manrope', 'Open Sans', sans-serif"
+      >
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Logo & Subscription -->
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              id="Layer_1"
+              data-name="Layer 1"
+              viewBox="0 0 481.25 121.64"
+              style="width: 227px"
+            >
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: #264653;
+                  }
 
-              .cls-2 {
-                fill: #e76f51;
-              }
+                  .cls-2 {
+                    fill: #e76f51;
+                  }
 
-              .cls-3 {
-                fill: #2a9d8f;
-              }
-            </style>
-          </defs>
-          <path class="cls-1"
-            d="M11.55,96.24a1.61,1.61,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,7,7,0,0,1-1.75.42,24.67,24.67,0,0,1-2.87.14,24,24,0,0,1-2.8-.14,7.63,7.63,0,0,1-1.79-.42,1.89,1.89,0,0,1-.9-.67A1.67,1.67,0,0,1,0,96.24v-63a1.71,1.71,0,0,1,.25-.91,1.76,1.76,0,0,1,.9-.7,6.74,6.74,0,0,1,1.79-.42,22,22,0,0,1,2.8-.14,22.62,22.62,0,0,1,2.87.14,6.22,6.22,0,0,1,1.75.42,2,2,0,0,1,.91.7,1.65,1.65,0,0,1,.28.91Z" />
-          <path class="cls-1"
-            d="M87.14,96.24a1.61,1.61,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,7,7,0,0,1-1.75.42,24,24,0,0,1-2.8.14,24.54,24.54,0,0,1-2.87-.14,6.89,6.89,0,0,1-1.75-.42,2.16,2.16,0,0,1-.91-.67,1.54,1.54,0,0,1-.28-.94V59.35a36.32,36.32,0,0,0-.84-8.68A18.11,18.11,0,0,0,72.3,45a10.62,10.62,0,0,0-4.17-3.64,13.18,13.18,0,0,0-5.91-1.26,15,15,0,0,0-8.68,3.08,47.7,47.7,0,0,0-9.1,9v44a1.54,1.54,0,0,1-.28.94,2.16,2.16,0,0,1-.91.67,6.89,6.89,0,0,1-1.75.42,24.54,24.54,0,0,1-2.87.14,24,24,0,0,1-2.8-.14,7.53,7.53,0,0,1-1.78-.42,1.93,1.93,0,0,1-.91-.67,1.75,1.75,0,0,1-.24-.94v-63a1.86,1.86,0,0,1,.21-1,1.76,1.76,0,0,1,.83-.7,4.77,4.77,0,0,1,1.61-.42,25.76,25.76,0,0,1,2.59-.1c1,0,1.88,0,2.56.1a4.12,4.12,0,0,1,1.57.42,2.2,2.2,0,0,1,.81.7,1.76,1.76,0,0,1,.24,1v8.32a38.73,38.73,0,0,1,10.61-8.71A22.83,22.83,0,0,1,64.6,30.1a23.75,23.75,0,0,1,10.6,2.13,19.22,19.22,0,0,1,7,5.7A22.77,22.77,0,0,1,86,46.3a49.68,49.68,0,0,1,1.16,11.51Z" />
-          <path class="cls-1"
-            d="M144.32,7.35a12.14,12.14,0,0,1-.14,2.13,8.64,8.64,0,0,1-.31,1.3,1.19,1.19,0,0,1-.46.66,1.25,1.25,0,0,1-.7.18,3.29,3.29,0,0,1-1.22-.32c-.49-.21-1.09-.44-1.79-.7a20.73,20.73,0,0,0-2.48-.7,15.72,15.72,0,0,0-3.33-.31,10.52,10.52,0,0,0-4.41.84,6.72,6.72,0,0,0-2.93,2.62,12.58,12.58,0,0,0-1.61,4.62,41,41,0,0,0-.49,6.9v6.86h9.16a1.75,1.75,0,0,1,.94.24,2.09,2.09,0,0,1,.7.84,5.58,5.58,0,0,1,.49,1.51,11.67,11.67,0,0,1,.18,2.23,7.8,7.8,0,0,1-.63,3.64A1.88,1.88,0,0,1,133.61,41h-9.16V96.24a1.61,1.61,0,0,1-.28.94,2.25,2.25,0,0,1-1,.67,7.53,7.53,0,0,1-1.78.42,28.07,28.07,0,0,1-5.6,0,7.63,7.63,0,0,1-1.79-.42,2.15,2.15,0,0,1-.94-.67,1.54,1.54,0,0,1-.28-.94V41h-8.89a1.78,1.78,0,0,1-1.68-1.12,8.71,8.71,0,0,1-.56-3.64,14.08,14.08,0,0,1,.14-2.23,5.36,5.36,0,0,1,.42-1.51,1.82,1.82,0,0,1,.7-.84,1.92,1.92,0,0,1,1-.24h8.89V24.92a45.89,45.89,0,0,1,1.22-11.31,19.53,19.53,0,0,1,3.75-7.73,14.89,14.89,0,0,1,6.33-4.44,25.42,25.42,0,0,1,9-1.44,24,24,0,0,1,4.76.46,18.5,18.5,0,0,1,3.57,1,5.62,5.62,0,0,1,1.68.94,3.26,3.26,0,0,1,.7,1.08,5.76,5.76,0,0,1,.39,1.61A21.21,21.21,0,0,1,144.32,7.35Z" />
-          <path class="cls-1"
-            d="M292.28,96a1.59,1.59,0,0,1-.28.94,2.13,2.13,0,0,1-.91.66,6.22,6.22,0,0,1-1.75.42,24.79,24.79,0,0,1-2.87.14,23.84,23.84,0,0,1-2.8-.14,6.74,6.74,0,0,1-1.79-.42,1.9,1.9,0,0,1-.91-.66,1.73,1.73,0,0,1-.24-.94V33.24a1.79,1.79,0,0,1,.24-.91,1.89,1.89,0,0,1,.91-.7,7.21,7.21,0,0,1,1.79-.41,21.84,21.84,0,0,1,2.8-.14,22.73,22.73,0,0,1,2.87.14,6.64,6.64,0,0,1,1.75.41,2.1,2.1,0,0,1,.91.7,1.65,1.65,0,0,1,.28.91Z" />
-          <path class="cls-1"
-            d="M339.8,99.74a35.89,35.89,0,0,1-9.31-1.12,25.42,25.42,0,0,1-7.24-3.15A21.25,21.25,0,0,1,318,90.6a24.17,24.17,0,0,1-3.43-6.19,24.73,24.73,0,0,1-1.4-5.53,47.81,47.81,0,0,1-.42-6.58V31.5h10.85V72.23A25.21,25.21,0,0,0,325,81.47a13.73,13.73,0,0,0,5.43,6.61A17.3,17.3,0,0,0,340,90.5q6.17,0,9.9-2.66a14.62,14.62,0,0,0,5.36-7.14,26.18,26.18,0,0,0,1.19-8.47V31.5h10.85V72.37a47,47,0,0,1-.39,6.26A27.92,27.92,0,0,1,365.7,84a24.24,24.24,0,0,1-3.47,6.33,21.49,21.49,0,0,1-5.42,5,26.12,26.12,0,0,1-7.46,3.25A36.26,36.26,0,0,1,339.8,99.74Z" />
-          <path class="cls-1"
-            d="M481.25,96.24a1.61,1.61,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,7,7,0,0,1-1.75.42,24,24,0,0,1-2.8.14,24.67,24.67,0,0,1-2.87-.14,7.63,7.63,0,0,1-1.79-.42,2.21,2.21,0,0,1-.94-.67,1.54,1.54,0,0,1-.28-.94V58a34.87,34.87,0,0,0-.7-7.28A16.82,16.82,0,0,0,466.69,45a10.5,10.5,0,0,0-3.92-3.64,11.8,11.8,0,0,0-5.6-1.26,13.18,13.18,0,0,0-8,3.08,55.61,55.61,0,0,0-8.86,9v44a1.6,1.6,0,0,1-.27.94,2.25,2.25,0,0,1-.95.67,7.53,7.53,0,0,1-1.78.42,27.77,27.77,0,0,1-5.57,0,7.56,7.56,0,0,1-1.82-.42,1.93,1.93,0,0,1-.91-.67,1.75,1.75,0,0,1-.24-.94V58a32.2,32.2,0,0,0-.77-7.28A18.22,18.22,0,0,0,425.68,45a10.57,10.57,0,0,0-3.89-3.64,11.58,11.58,0,0,0-5.56-1.26,13.35,13.35,0,0,0-8.05,3.08,52.85,52.85,0,0,0-8.82,9v44a1.54,1.54,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,6.89,6.89,0,0,1-1.75.42,24.67,24.67,0,0,1-2.87.14,24,24,0,0,1-2.8-.14,7.53,7.53,0,0,1-1.78-.42,1.88,1.88,0,0,1-.91-.67,1.67,1.67,0,0,1-.25-.94v-63a2,2,0,0,1,.21-1,1.84,1.84,0,0,1,.84-.7,4.77,4.77,0,0,1,1.61-.42,25.76,25.76,0,0,1,2.59-.1c1,0,1.88,0,2.56.1a4.12,4.12,0,0,1,1.57.42,2.28,2.28,0,0,1,.81.7,1.76,1.76,0,0,1,.24,1v8.32a41.11,41.11,0,0,1,10.32-8.71,20.77,20.77,0,0,1,10.12-2.76,25,25,0,0,1,7,.91,18.68,18.68,0,0,1,5.5,2.55,17.19,17.19,0,0,1,4.06,3.92,23,23,0,0,1,2.8,5.07,65,65,0,0,1,6-5.81,36.18,36.18,0,0,1,5.46-3.84,22.13,22.13,0,0,1,5.11-2.14,19.35,19.35,0,0,1,5-.66,22.12,22.12,0,0,1,10.22,2.13,18.56,18.56,0,0,1,6.68,5.7,22.7,22.7,0,0,1,3.64,8.37,45.28,45.28,0,0,1,1.09,10.11Z" />
-          <path class="cls-2"
-            d="M237.59,83.29a1.54,1.54,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,6.89,6.89,0,0,1-1.75.42,24,24,0,0,1-2.8.14,24.67,24.67,0,0,1-2.87-.14,6.89,6.89,0,0,1-1.75-.42,2.23,2.23,0,0,1-.91-.67,1.54,1.54,0,0,1-.28-.94V46.4a36.32,36.32,0,0,0-.84-8.68,17.88,17.88,0,0,0-2.45-5.67,10.66,10.66,0,0,0-4.16-3.64,13.25,13.25,0,0,0-5.92-1.26A14.93,14.93,0,0,0,204,30.23a47.13,47.13,0,0,0-9.1,9v44a1.61,1.61,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,7,7,0,0,1-1.75.42,24.79,24.79,0,0,1-2.87.14,23.84,23.84,0,0,1-2.8-.14,7.63,7.63,0,0,1-1.79-.42,2,2,0,0,1-.91-.67,1.75,1.75,0,0,1-.24-.94v-63a2,2,0,0,1,.21-.94,1.84,1.84,0,0,1,.84-.7,4.71,4.71,0,0,1,1.61-.42,25,25,0,0,1,2.59-.11,25.29,25.29,0,0,1,2.55.11,4.18,4.18,0,0,1,1.58.42,2.16,2.16,0,0,1,.8.7,1.67,1.67,0,0,1,.25.94v8.33a38.7,38.7,0,0,1,10.6-8.71,22.83,22.83,0,0,1,10.67-2.76,23.8,23.8,0,0,1,10.61,2.13,19,19,0,0,1,7,5.7,22.79,22.79,0,0,1,3.82,8.37,49.73,49.73,0,0,1,1.15,11.51Z" />
-          <path class="cls-2"
-            d="M205.07,41.2a1.54,1.54,0,0,1,.28-.94,2.07,2.07,0,0,1,.91-.66,6.13,6.13,0,0,1,1.75-.42,21.84,21.84,0,0,1,2.8-.14,22.73,22.73,0,0,1,2.87.14,6.22,6.22,0,0,1,1.75.42,2.13,2.13,0,0,1,.91.66,1.61,1.61,0,0,1,.28.94V78a36.17,36.17,0,0,0,.84,8.67,18,18,0,0,0,2.44,5.66A10.74,10.74,0,0,0,224.07,96,13.18,13.18,0,0,0,230,97.25a14.93,14.93,0,0,0,8.68-3.08,46.67,46.67,0,0,0,9.1-9v-44a1.54,1.54,0,0,1,.28-.94,2.13,2.13,0,0,1,.91-.66,6.13,6.13,0,0,1,1.75-.42,22.62,22.62,0,0,1,2.87-.14,22,22,0,0,1,2.8.14,6.56,6.56,0,0,1,1.78.42,1.81,1.81,0,0,1,.91.66,1.67,1.67,0,0,1,.25.94v62.9a2,2,0,0,1-.21.94,1.84,1.84,0,0,1-.84.7,4.77,4.77,0,0,1-1.61.42,25.63,25.63,0,0,1-2.59.1c-1,0-1.88,0-2.55-.1a4.13,4.13,0,0,1-1.58-.42,2.16,2.16,0,0,1-.8-.7,1.67,1.67,0,0,1-.25-.94V95.78a38.64,38.64,0,0,1-10.6,8.7,22.84,22.84,0,0,1-10.68,2.76,23.75,23.75,0,0,1-10.6-2.13,19,19,0,0,1-7-5.7,22.53,22.53,0,0,1-3.82-8.35,49.61,49.61,0,0,1-1.15-11.49Z" />
-          <path class="cls-1"
-            d="M162.86,96.24a1.54,1.54,0,0,1-.28.94,2.16,2.16,0,0,1-.91.67,6.89,6.89,0,0,1-1.75.42,24.54,24.54,0,0,1-2.87.14,24,24,0,0,1-2.8-.14,7.53,7.53,0,0,1-1.78-.42,1.88,1.88,0,0,1-.91-.67,1.67,1.67,0,0,1-.25-.94v-63a1.71,1.71,0,0,1,.25-.91,1.74,1.74,0,0,1,.91-.7,6.66,6.66,0,0,1,1.78-.42,22,22,0,0,1,2.8-.14,22.52,22.52,0,0,1,2.87.14,6.13,6.13,0,0,1,1.75.42,2,2,0,0,1,.91.7,1.58,1.58,0,0,1,.28.91Z" />
-          <path class="cls-3"
-            d="M293.61,114.67c0,2.7-.52,4.53-1.54,5.51s-2.92,1.46-5.67,1.46-4.56-.47-5.57-1.43-1.5-2.75-1.5-5.4.51-4.53,1.54-5.5,2.91-1.47,5.67-1.47,4.56.48,5.56,1.43S293.61,112,293.61,114.67Z" />
-          <path class="cls-3"
-            d="M164.38,14.89c0,2.69-.52,4.53-1.54,5.5s-2.92,1.47-5.67,1.47-4.56-.48-5.57-1.43-1.5-2.75-1.5-5.4.51-4.53,1.54-5.51,2.91-1.46,5.67-1.46,4.56.48,5.56,1.43S164.38,12.24,164.38,14.89Z" />
-        </svg>
-        <p class="mb-4 text-black italic">Sophisticated Simplicity<sup>™</sup></p>
-          <!-- Added Headquarters & Mail Section -->
-          <div class="flex flex-col space-y-2 text-black mb-6">
-            <div class="flex items-center gap-2">
-              <!-- Font Awesome Home Icon -->
-              <i class="fa-solid fa-house text-lg"></i>
-              <span>Headquarters (D.C. Metro Area) Chantilly, VA, 20151</span>
+                  .cls-3 {
+                    fill: #2a9d8f;
+                  }
+                </style>
+              </defs>
+              <path
+                class="cls-1"
+                d="M11.55,96.24a1.61,1.61,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,7,7,0,0,1-1.75.42,24.67,24.67,0,0,1-2.87.14,24,24,0,0,1-2.8-.14,7.63,7.63,0,0,1-1.79-.42,1.89,1.89,0,0,1-.9-.67A1.67,1.67,0,0,1,0,96.24v-63a1.71,1.71,0,0,1,.25-.91,1.76,1.76,0,0,1,.9-.7,6.74,6.74,0,0,1,1.79-.42,22,22,0,0,1,2.8-.14,22.62,22.62,0,0,1,2.87.14,6.22,6.22,0,0,1,1.75.42,2,2,0,0,1,.91.7,1.65,1.65,0,0,1,.28.91Z"
+              />
+              <path
+                class="cls-1"
+                d="M87.14,96.24a1.61,1.61,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,7,7,0,0,1-1.75.42,24,24,0,0,1-2.8.14,24.54,24.54,0,0,1-2.87-.14,6.89,6.89,0,0,1-1.75-.42,2.16,2.16,0,0,1-.91-.67,1.54,1.54,0,0,1-.28-.94V59.35a36.32,36.32,0,0,0-.84-8.68A18.11,18.11,0,0,0,72.3,45a10.62,10.62,0,0,0-4.17-3.64,13.18,13.18,0,0,0-5.91-1.26,15,15,0,0,0-8.68,3.08,47.7,47.7,0,0,0-9.1,9v44a1.54,1.54,0,0,1-.28.94,2.16,2.16,0,0,1-.91.67,6.89,6.89,0,0,1-1.75.42,24.54,24.54,0,0,1-2.87.14,24,24,0,0,1-2.8-.14,7.53,7.53,0,0,1-1.78-.42,1.93,1.93,0,0,1-.91-.67,1.75,1.75,0,0,1-.24-.94v-63a1.86,1.86,0,0,1,.21-1,1.76,1.76,0,0,1,.83-.7,4.77,4.77,0,0,1,1.61-.42,25.76,25.76,0,0,1,2.59-.1c1,0,1.88,0,2.56.1a4.12,4.12,0,0,1,1.57.42,2.2,2.2,0,0,1,.81.7,1.76,1.76,0,0,1,.24,1v8.32a38.73,38.73,0,0,1,10.61-8.71A22.83,22.83,0,0,1,64.6,30.1a23.75,23.75,0,0,1,10.6,2.13,19.22,19.22,0,0,1,7,5.7A22.77,22.77,0,0,1,86,46.3a49.68,49.68,0,0,1,1.16,11.51Z"
+              />
+              <path
+                class="cls-1"
+                d="M144.32,7.35a12.14,12.14,0,0,1-.14,2.13,8.64,8.64,0,0,1-.31,1.3,1.19,1.19,0,0,1-.46.66,1.25,1.25,0,0,1-.7.18,3.29,3.29,0,0,1-1.22-.32c-.49-.21-1.09-.44-1.79-.7a20.73,20.73,0,0,0-2.48-.7,15.72,15.72,0,0,0-3.33-.31,10.52,10.52,0,0,0-4.41.84,6.72,6.72,0,0,0-2.93,2.62,12.58,12.58,0,0,0-1.61,4.62,41,41,0,0,0-.49,6.9v6.86h9.16a1.75,1.75,0,0,1,.94.24,2.09,2.09,0,0,1,.7.84,5.58,5.58,0,0,1,.49,1.51,11.67,11.67,0,0,1,.18,2.23,7.8,7.8,0,0,1-.63,3.64A1.88,1.88,0,0,1,133.61,41h-9.16V96.24a1.61,1.61,0,0,1-.28.94,2.25,2.25,0,0,1-1,.67,7.53,7.53,0,0,1-1.78.42,28.07,28.07,0,0,1-5.6,0,7.63,7.63,0,0,1-1.79-.42,2.15,2.15,0,0,1-.94-.67,1.54,1.54,0,0,1-.28-.94V41h-8.89a1.78,1.78,0,0,1-1.68-1.12,8.71,8.71,0,0,1-.56-3.64,14.08,14.08,0,0,1,.14-2.23,5.36,5.36,0,0,1,.42-1.51,1.82,1.82,0,0,1,.7-.84,1.92,1.92,0,0,1,1-.24h8.89V24.92a45.89,45.89,0,0,1,1.22-11.31,19.53,19.53,0,0,1,3.75-7.73,14.89,14.89,0,0,1,6.33-4.44,25.42,25.42,0,0,1,9-1.44,24,24,0,0,1,4.76.46,18.5,18.5,0,0,1,3.57,1,5.62,5.62,0,0,1,1.68.94,3.26,3.26,0,0,1,.7,1.08,5.76,5.76,0,0,1,.39,1.61A21.21,21.21,0,0,1,144.32,7.35Z"
+              />
+              <path
+                class="cls-1"
+                d="M292.28,96a1.59,1.59,0,0,1-.28.94,2.13,2.13,0,0,1-.91.66,6.22,6.22,0,0,1-1.75.42,24.79,24.79,0,0,1-2.87.14,23.84,23.84,0,0,1-2.8-.14,6.74,6.74,0,0,1-1.79-.42,1.9,1.9,0,0,1-.91-.66,1.73,1.73,0,0,1-.24-.94V33.24a1.79,1.79,0,0,1,.24-.91,1.89,1.89,0,0,1,.91-.7,7.21,7.21,0,0,1,1.79-.41,21.84,21.84,0,0,1,2.8-.14,22.73,22.73,0,0,1,2.87.14,6.64,6.64,0,0,1,1.75.41,2.1,2.1,0,0,1,.91.7,1.65,1.65,0,0,1,.28.91Z"
+              />
+              <path
+                class="cls-1"
+                d="M339.8,99.74a35.89,35.89,0,0,1-9.31-1.12,25.42,25.42,0,0,1-7.24-3.15A21.25,21.25,0,0,1,318,90.6a24.17,24.17,0,0,1-3.43-6.19,24.73,24.73,0,0,1-1.4-5.53,47.81,47.81,0,0,1-.42-6.58V31.5h10.85V72.23A25.21,25.21,0,0,0,325,81.47a13.73,13.73,0,0,0,5.43,6.61A17.3,17.3,0,0,0,340,90.5q6.17,0,9.9-2.66a14.62,14.62,0,0,0,5.36-7.14,26.18,26.18,0,0,0,1.19-8.47V31.5h10.85V72.37a47,47,0,0,1-.39,6.26A27.92,27.92,0,0,1,365.7,84a24.24,24.24,0,0,1-3.47,6.33,21.49,21.49,0,0,1-5.42,5,26.12,26.12,0,0,1-7.46,3.25A36.26,36.26,0,0,1,339.8,99.74Z"
+              />
+              <path
+                class="cls-1"
+                d="M481.25,96.24a1.61,1.61,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,7,7,0,0,1-1.75.42,24,24,0,0,1-2.8.14,24.67,24.67,0,0,1-2.87-.14,7.63,7.63,0,0,1-1.79-.42,2.21,2.21,0,0,1-.94-.67,1.54,1.54,0,0,1-.28-.94V58a34.87,34.87,0,0,0-.7-7.28A16.82,16.82,0,0,0,466.69,45a10.5,10.5,0,0,0-3.92-3.64,11.8,11.8,0,0,0-5.6-1.26,13.18,13.18,0,0,0-8,3.08,55.61,55.61,0,0,0-8.86,9v44a1.6,1.6,0,0,1-.27.94,2.25,2.25,0,0,1-.95.67,7.53,7.53,0,0,1-1.78.42,27.77,27.77,0,0,1-5.57,0,7.56,7.56,0,0,1-1.82-.42,1.93,1.93,0,0,1-.91-.67,1.75,1.75,0,0,1-.24-.94V58a32.2,32.2,0,0,0-.77-7.28A18.22,18.22,0,0,0,425.68,45a10.57,10.57,0,0,0-3.89-3.64,11.58,11.58,0,0,0-5.56-1.26,13.35,13.35,0,0,0-8.05,3.08,52.85,52.85,0,0,0-8.82,9v44a1.54,1.54,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,6.89,6.89,0,0,1-1.75.42,24.67,24.67,0,0,1-2.87.14,24,24,0,0,1-2.8-.14,7.53,7.53,0,0,1-1.78-.42,1.88,1.88,0,0,1-.91-.67,1.67,1.67,0,0,1-.25-.94v-63a2,2,0,0,1,.21-1,1.84,1.84,0,0,1,.84-.7,4.77,4.77,0,0,1,1.61-.42,25.76,25.76,0,0,1,2.59-.1c1,0,1.88,0,2.56.1a4.12,4.12,0,0,1,1.57.42,2.28,2.28,0,0,1,.81.7,1.76,1.76,0,0,1,.24,1v8.32a41.11,41.11,0,0,1,10.32-8.71,20.77,20.77,0,0,1,10.12-2.76,25,25,0,0,1,7,.91,18.68,18.68,0,0,1,5.5,2.55,17.19,17.19,0,0,1,4.06,3.92,23,23,0,0,1,2.8,5.07,65,65,0,0,1,6-5.81,36.18,36.18,0,0,1,5.46-3.84,22.13,22.13,0,0,1,5.11-2.14,19.35,19.35,0,0,1,5-.66,22.12,22.12,0,0,1,10.22,2.13,18.56,18.56,0,0,1,6.68,5.7,22.7,22.7,0,0,1,3.64,8.37,45.28,45.28,0,0,1,1.09,10.11Z"
+              />
+              <path
+                class="cls-2"
+                d="M237.59,83.29a1.54,1.54,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,6.89,6.89,0,0,1-1.75.42,24,24,0,0,1-2.8.14,24.67,24.67,0,0,1-2.87-.14,6.89,6.89,0,0,1-1.75-.42,2.23,2.23,0,0,1-.91-.67,1.54,1.54,0,0,1-.28-.94V46.4a36.32,36.32,0,0,0-.84-8.68,17.88,17.88,0,0,0-2.45-5.67,10.66,10.66,0,0,0-4.16-3.64,13.25,13.25,0,0,0-5.92-1.26A14.93,14.93,0,0,0,204,30.23a47.13,47.13,0,0,0-9.1,9v44a1.61,1.61,0,0,1-.28.94,2.23,2.23,0,0,1-.91.67,7,7,0,0,1-1.75.42,24.79,24.79,0,0,1-2.87.14,23.84,23.84,0,0,1-2.8-.14,7.63,7.63,0,0,1-1.79-.42,2,2,0,0,1-.91-.67,1.75,1.75,0,0,1-.24-.94v-63a2,2,0,0,1,.21-.94,1.84,1.84,0,0,1,.84-.7,4.71,4.71,0,0,1,1.61-.42,25,25,0,0,1,2.59-.11,25.29,25.29,0,0,1,2.55.11,4.18,4.18,0,0,1,1.58.42,2.16,2.16,0,0,1,.8.7,1.67,1.67,0,0,1,.25.94v8.33a38.7,38.7,0,0,1,10.6-8.71,22.83,22.83,0,0,1,10.67-2.76,23.8,23.8,0,0,1,10.61,2.13,19,19,0,0,1,7,5.7,22.79,22.79,0,0,1,3.82,8.37,49.73,49.73,0,0,1,1.15,11.51Z"
+              />
+              <path
+                class="cls-2"
+                d="M205.07,41.2a1.54,1.54,0,0,1,.28-.94,2.07,2.07,0,0,1,.91-.66,6.13,6.13,0,0,1,1.75-.42,21.84,21.84,0,0,1,2.8-.14,22.73,22.73,0,0,1,2.87.14,6.22,6.22,0,0,1,1.75.42,2.13,2.13,0,0,1,.91.66,1.61,1.61,0,0,1,.28.94V78a36.17,36.17,0,0,0,.84,8.67,18,18,0,0,0,2.44,5.66A10.74,10.74,0,0,0,224.07,96,13.18,13.18,0,0,0,230,97.25a14.93,14.93,0,0,0,8.68-3.08,46.67,46.67,0,0,0,9.1-9v-44a1.54,1.54,0,0,1,.28-.94,2.13,2.13,0,0,1,.91-.66,6.13,6.13,0,0,1,1.75-.42,22.62,22.62,0,0,1,2.87-.14,22,22,0,0,1,2.8.14,6.56,6.56,0,0,1,1.78.42,1.81,1.81,0,0,1,.91.66,1.67,1.67,0,0,1,.25.94v62.9a2,2,0,0,1-.21.94,1.84,1.84,0,0,1-.84.7,4.77,4.77,0,0,1-1.61.42,25.63,25.63,0,0,1-2.59.1c-1,0-1.88,0-2.55-.1a4.13,4.13,0,0,1-1.58-.42,2.16,2.16,0,0,1-.8-.7,1.67,1.67,0,0,1-.25-.94V95.78a38.64,38.64,0,0,1-10.6,8.7,22.84,22.84,0,0,1-10.68,2.76,23.75,23.75,0,0,1-10.6-2.13,19,19,0,0,1-7-5.7,22.53,22.53,0,0,1-3.82-8.35,49.61,49.61,0,0,1-1.15-11.49Z"
+              />
+              <path
+                class="cls-1"
+                d="M162.86,96.24a1.54,1.54,0,0,1-.28.94,2.16,2.16,0,0,1-.91.67,6.89,6.89,0,0,1-1.75.42,24.54,24.54,0,0,1-2.87.14,24,24,0,0,1-2.8-.14,7.53,7.53,0,0,1-1.78-.42,1.88,1.88,0,0,1-.91-.67,1.67,1.67,0,0,1-.25-.94v-63a1.71,1.71,0,0,1,.25-.91,1.74,1.74,0,0,1,.91-.7,6.66,6.66,0,0,1,1.78-.42,22,22,0,0,1,2.8-.14,22.52,22.52,0,0,1,2.87.14,6.13,6.13,0,0,1,1.75.42,2,2,0,0,1,.91.7,1.58,1.58,0,0,1,.28.91Z"
+              />
+              <path
+                class="cls-3"
+                d="M293.61,114.67c0,2.7-.52,4.53-1.54,5.51s-2.92,1.46-5.67,1.46-4.56-.47-5.57-1.43-1.5-2.75-1.5-5.4.51-4.53,1.54-5.5,2.91-1.47,5.67-1.47,4.56.48,5.56,1.43S293.61,112,293.61,114.67Z"
+              />
+              <path
+                class="cls-3"
+                d="M164.38,14.89c0,2.69-.52,4.53-1.54,5.5s-2.92,1.47-5.67,1.47-4.56-.48-5.57-1.43-1.5-2.75-1.5-5.4.51-4.53,1.54-5.51,2.91-1.46,5.67-1.46,4.56.48,5.56,1.43S164.38,12.24,164.38,14.89Z"
+              />
+            </svg>
+            <p class="mb-4 text-black italic">
+              Sophisticated Simplicity<sup>™</sup>
+            </p>
+            <!-- Added Headquarters & Mail Section -->
+            <div class="flex flex-col space-y-2 text-black mb-6">
+              <div class="flex items-center gap-2">
+                <!-- Font Awesome Home Icon -->
+                <i class="fa-solid fa-house text-lg"></i>
+                <span>Headquarters (D.C. Metro Area) Chantilly, VA, 20151</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <a href="#">
+                  <i class="fa-solid fa-envelope text-lg"></i>
+                  <span class="ml-2">hello@infinnium.com</span>
+                </a>
+              </div>
             </div>
-            <div class="flex items-center gap-2">
-              <a href="#">
-            <i class="fa-solid fa-envelope text-lg"></i>
-            <span class="ml-2">hello@infinnium.com</span>
-          </a>
-              
+
+            <div class="flex gap-4 mt-6">
+              <a
+                href="#"
+                class="border border-gray-600 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-800 hover:text-white text-black transition"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                href="#"
+                class="border border-gray-600 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-800 hover:text-white text-black transition"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </a>
             </div>
           </div>
 
-        <div class="flex gap-4 mt-6">
-          <a href="#"
-            class="border border-gray-600 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-800 hover:text-white text-black transition">
-            <i class="fa-brands fa-linkedin-in "></i>
-          </a>
-          <a href="#"
-            class="border border-gray-600 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-800 hover:text-white text-black transition">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-        </div>
-      </div>
+          <!-- Right-aligned sections -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:pl-8">
+            <!-- Quick Links -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4 text-black">Quick Links</h3>
+              <ul class="space-y-2 text-gray-600">
+                <li>
+                  <a href="#" class="text-black hover:text-black">Home</a>
+                </li>
+                <li>
+                  <a href="#" class="text-black hover:text-black">About Us</a>
+                </li>
+                <li>
+                  <a href="#" class="text-black hover:text-black">Contact Us</a>
+                </li>
+                <li>
+                  <a href="#" class="text-black hover:text-black">Blogs</a>
+                </li>
+              </ul>
+            </div>
 
-      <!-- Right-aligned sections -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:pl-8">
-        <!-- Quick Links -->
-        <div>
-          <h3 class="text-lg font-semibold mb-4 text-black">Quick Links</h3>
-          <ul class="space-y-2 text-gray-600">
-            <li><a href="#" class="text-black hover:text-black">Home</a></li>
-            <li><a href="#" class="text-black hover:text-black">About Us</a></li>
-            <li><a href="#" class="text-black hover:text-black">Contact Us</a></li>
-            <li><a href="#" class="text-black hover:text-black">Blogs</a></li>
-          </ul>
+            <!-- Services -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4 text-black">Services</h3>
+              <ul class="space-y-2 text-gray-600">
+                <li>
+                  <a href="#" class="text-black hover:text-black"
+                    >Breach Responses</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-black hover:text-black"
+                    >Unified Information Governance</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-black hover:text-black"
+                    >Data Protection/DSAR</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-black hover:text-black">eDiscovery</a>
+                </li>
+                <li>
+                  <a href="#" class="text-black hover:text-black"
+                    >Automated Redaction</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-black hover:text-black"
+                    >Data Mapping</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-black hover:text-black"
+                    >Data Retention</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-black hover:text-black"
+                    >Unified Archival</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-black hover:text-black"
+                    >Data Disposition</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-black hover:text-black">Legal Hold</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Products -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4 text-black">Products</h3>
+              <ul class="space-y-2 text-gray-600">
+                <li>
+                  <a href="#" class="text-black hover:text-black"
+                    >4iG<sup>®</sup></a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-black hover:text-black"
+                    >Data Breach<sup>™</sup></a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-black hover:text-black"
+                    >ObscurePI<sup>®</sup></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <!-- Services -->
-        <div>
-          <h3 class="text-lg font-semibold mb-4 text-black">Services</h3>
-          <ul class="space-y-2 text-gray-600">
-            <li><a href="#" class="text-black hover:text-black">Breach Responses</a></li>
-            <li><a href="#" class="text-black hover:text-black">Unified Information Governance</a></li>
-            <li><a href="#" class="text-black hover:text-black">Data Protection/DSAR</a></li>
-            <li><a href="#" class="text-black hover:text-black">eDiscovery</a></li>
-            <li><a href="#" class="text-black hover:text-black">Automated Redaction</a></li>
-            <li><a href="#" class="text-black hover:text-black">Data Mapping</a></li>
-            <li><a href="#" class="text-black hover:text-black">Data Retention</a></li>
-            <li><a href="#" class="text-black hover:text-black">Unified Archival</a></li>
-            <li><a href="#" class="text-black hover:text-black">Data Disposition</a></li>
-            <li><a href="#" class="text-black hover:text-black">Legal Hold</a></li>
-          </ul>
+        <!-- Bottom Section -->
+        <div
+          class="max-w-7xl mx-auto mt-10 border-t border-gray-300 pt-6 text-left text-black"
+        >
+          © 2025, Infinnium. All rights reserved.
         </div>
-
-        <!-- Products -->
-        <div>
-          <h3 class="text-lg font-semibold mb-4 text-black">Products</h3>
-          <ul class="space-y-2 text-gray-600">
-            <li><a href="#" class="text-black hover:text-black">4iG<sup>®</sup></a></li>
-            <li><a href="#" class="text-black hover:text-black">Data Breach<sup>™</sup></a></li>
-            <li><a href="#" class="text-black hover:text-black">ObscurePI<sup>®</sup></a></li>
-          </ul>
-        </div>
-      </div>
+      </footer>
     </div>
 
-    <!-- Bottom Section -->
-    <div class="max-w-7xl mx-auto mt-10 border-t border-gray-300 pt-6 text-left text-black">
-      © 2025, Infinnium. All rights reserved.
-    </div>
-  </footer>
-</div>
+    <script>
+      function toggleDescription(id) {
+        document.getElementById(`desc-${id}`).classList.toggle("hidden");
+      }
+    </script>
 
-<script>
-  const tiltContainer = document.getElementById('tiltContainer');
-  document.addEventListener('mousemove', (e) => {
-    const { innerWidth, innerHeight } = window;
-    // Calculate normalized positions (values between -0.5 and 0.5)
-    const xPercent = (e.clientX / innerWidth) - 0.5;
-    const yPercent = (e.clientY / innerHeight) - 0.5;
-    // Multiply by a factor for rotation intensity (adjust as needed)
-    const rotateX = yPercent * 15; // Tilt up/down
-    const rotateY = -xPercent * 15; // Tilt left/right
-    tiltContainer.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-  });
-</script>
-
-  <!-- JavaScript for animations and mobile menu toggle -->
-  <script>
-    // Page load animations: add fade-in class to each section with a delay
-    document.addEventListener("DOMContentLoaded", function() {
-      const sections = document.querySelectorAll(".animate-section");
-      sections.forEach((section, index) => {
-        setTimeout(() => {
-          section.classList.add("fade-in");
-        }, index * 300);
-      });
-    });
-
-    // Mobile menu toggle functionality
-    const mobileMenuButton = document.getElementById("mobile-menu-button");
-    const mobileMenu = document.getElementById("mobile-menu");
-    mobileMenuButton.addEventListener("click", function() {
-      mobileMenu.classList.toggle("hidden");
-    });
-  </script>
-   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll(".animate-fade").forEach((el, index) => {
-            setTimeout(() => { el.classList.add("opacity-100"); }, index * 200);
-        });
-    });
-</script>
-</body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </body>
 </html>

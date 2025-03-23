@@ -107,10 +107,10 @@ min-width: 10rem; /* Adjust this based on the longest word */
   z-index: 0;
 }
 
-/* Button styling */
+/* Button styling hero section button 1*/
 .circle-button {
   display: flex;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
   width: 50px; /* Ensure it's circular */
   height: 50px;
@@ -133,7 +133,7 @@ min-width: 10rem; /* Adjust this based on the longest word */
   display: inline-block;
 }
 
-/* From Uiverse.io by cssbuttons-io */ 
+/* From Uiverse.io by cssbuttons-io 1*/ 
 button {
 position: relative;
 display: inline-block;
@@ -234,137 +234,6 @@ button:hover .button-text {
 color: #fff;
 border: #e65a4e;
 }
-
-/* same button but with black arrow and text  */
-/* Button styling */
-.circle-button {
-display: flex;
-justify-content: center;
-align-items: center;
-width: 50px; /* Ensure it's circular */
-height: 50px;
-background-color: #e65a4e;
-border-radius: 50%;
-color: white;
-font-size: 20px;
-font-weight: bold;
-transition: transform 0.3s ease-in-out;
-}
-
-.circle-button:hover {
-transform: scale(1.1);
-background-color: #d54a40; /* Slightly darker on hover */
-}
-
-/* Arrow Rotation (↗) */
-.arrow-icon {
-transform: rotate(-45deg); /* Rotating right arrow to upper-right */
-display: inline-block;
-}
-
-/* From Uiverse.io by cssbuttons-io 1*/ 
-button {
-position: relative;
-display: inline-block;
-cursor: pointer;
-outline: none;
-border: 0;
-vertical-align: middle;
-text-decoration: none;
-background: transparent;
-padding: 0;
-font-size: inherit;
-font-family: inherit;
-}
-
-button.learn-more {
-width: 12rem;
-height: auto;
-}
-
-button.learn-more .circle {
-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-position: relative;
-display: block;
-margin: 0;
-width: 3rem;
-height: 3rem;
-background: transparent;
-border: 2px solid #E66F51;
-border-radius: 1.625rem;
-}
-
-button.learn-more .circle .iconn {
-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-position: absolute;
-top: 0;
-bottom: 0;
-margin: auto;
-background: #fff;
-}
-
-button.learn-more .circle .iconn.arroww {
-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-left: 0.525rem;
-width: 1.125rem;
-height: 0.125rem;
-background: none;
-}
-
-/* button.learn-more .circle .icon.arrow::before {
-position: absolute;
-content: "";
-top: -0.29rem;
-right: 0.1924rem;
-width: 0.625rem;
-height: 0.625rem;
-border-top: 0.125rem solid #fff;
-border-right: 0.125rem solid #fff;
-transform: rotate(45deg);
-} */
-button.learn-more .circle .iconn.arroww::before {
-position: absolute;
-content: "";
-top: -0.29rem;
-right: 0.0625rem;
-width: 0.625rem;
-height: 0.625rem;
-border-top: 0.125rem solid #000;
-border-right: 0.125rem solid #000;
-transform: rotate(45deg);
-}
-
-button.learn-more .button-text {
-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-padding: 2rem 0;
-margin: 0 0 0 1.85rem;
-color: #ffffff;
-font-weight: 700;
-line-height: 1.6;
-text-align: center;
-/* text-transform: uppercase; */
-}
-
-button:hover .circle {
-width: 100%;
-}
-
-button:hover .circle .iconn.arroww {
-background: #000;
-transform: translate(1rem, 0);
-}
-
-button:hover .button-text {
-color: #fff;
-border: #e65a4e;
-}
-
-/* for hero section grid 2 */
 
 /* .socket {
 width: 400px;
@@ -759,7 +628,7 @@ fill: #234653 !important;
   transform: translateX(0);
 }
 /* From Uiverse.io by JaydipPrajapati1910 */ 
-buttton {
+.common {
 background: transparent;
 position: relative;
 padding: 5px 15px;
@@ -773,16 +642,16 @@ border: 2px solid #E76F51;
 border-radius: 25px;
 outline: none;
 overflow: hidden;
-color: #000;
+color: #000000;
 transition: color 0.3s 0.1s ease-out;
 text-align: center;
 }
 
-buttton span {
+.common span {
 margin: 10px;
 }
 
-buttton::before {
+.common::before {
 position: absolute;
 top: 0;
 left: 0;
@@ -800,12 +669,12 @@ transition: box-shadow 0.5s ease-out;
 z-index: -1;
 }
 
-buttton:hover {
+.common:hover {
 color: #ffffff;
-border: 1px solid #E76F51;
+border: 2px solid #E76F51;
 }
 
-buttton:hover::before {
+.common:hover::before {
 box-shadow: inset 0 0 0 10em #E76F51
 }
 
