@@ -354,6 +354,9 @@ window.addEventListener('resize', function() {
   }
 });
 
-      function toggleDescription(id) {
-        document.getElementById(`desc-${id}`).classList.toggle("hidden");
-      }
+function toggleDescription(id) {
+  const desc = document.getElementById(`desc-${id}`);
+  const button = document.querySelector(`[onclick="toggleDescription(${id})"]`);
+  desc.classList.toggle('truncate-text');
+  button.textContent = desc.classList.contains('truncate-text') ? 'Read More →' : 'Read Less ↑';
+}

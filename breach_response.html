@@ -16,15 +16,38 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
   <style>
-    @media (max-width: 768px) {
-      .truncate-text {
-        display: -webkit-box;
-        -webkit-line-clamp: 3; /* Show only 3 lines */
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+    .truncate-text {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    /* Improve column layout */
+    .columns-1 {
+      column-count: 1;
+    }
+    .md\:columns-2 {
+      column-count: 2;
+    }
+    .break-inside-avoid {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    
+    /* Smooth transition for card height */
+    .bg-white {
+      transition: height 0.3s ease;
+    }
+    
+    /* Better spacing between columns */
+    @media (min-width: 768px) {
+      .gap-8 {
+        column-gap: 2rem;
       }
     }
-  </style>
+    </style>
 </head>
 <body>
     <div class="bg-gray-900 text-white w-full">
@@ -199,19 +222,14 @@
       class="relative h-screen flex items-center justify-center overflow-hidden bg-gray-900"
       style="font-family: 'Manrope', 'Open Sans', sans-serif">
       <!-- Content Container -->
-      <div class="relative z-10 text-center px-6 animate-fade">
-        <!-- <h1
-          class="mt-40 mb-14 text-3xl md:text-4xl font-extrabold text-white drop-shadow-lg"
-        >
-          Revolutionizing The Way You Interact With & Govern Data
-        </h1> -->
+      <div class="relative z-10 text-center px-0 animate-fade">
         <div class="mt-6 justify-center">
-       <img src="images/solution-web-banner.webp"/>
+       <img src="images/solution-web-banner-black-bg-white-text.png"/>
       </div>
       </div>
     </section>
 
-    <section class="bg-[#EAF4F2] py-16 px-6 md:px-12 lg:px-20">
+    <!-- <section class="bg-[#EAF4F2] py-16 px-6 md:px-12 lg:px-20">
       <div class="max-w-6xl mx-auto space-y-12">
         <div>
           <h2 class="text-2xl md:text-3xl font-semibold text-[#12423C]">Complete Control Over Breach Data with 4iG®</h2>
@@ -262,13 +280,12 @@
         <div class="hidden sm:block w-full h-[1px] bg-gray-500"></div>
         <div class="hidden md:block w-full h-[1px] bg-gray-500"></div>
       </div>
-    </section>
+    </section> -->
 
 
-    <section class="bg-[#EAF4F2] py-16 px-6 md:px-12 lg:px-20">
+    <!-- <section class="bg-[#EAF4F2] py-16 px-6 md:px-12 lg:px-20">
       <div class="max-w-6xl mx-auto space-y-12">
         
-        <!-- First Item (Left) -->
         <div class="flex flex-col md:flex-row items-start md:items-center">
           <h2 class="text-2xl md:text-3xl font-semibold text-[#12423C] md:w-1/3">Complete Control Over Breach Data with 4iG®</h2>
           <p class="mt-4 md:mt-0 md:ml-8 text-[#1E2D2F] text-lg md:w-2/3">
@@ -276,7 +293,6 @@
           </p>
         </div>
     
-        <!-- Second Item (Right) -->
         <div class="flex flex-col md:flex-row-reverse items-start md:items-center">
           <h2 class="text-2xl md:text-3xl font-semibold text-[#12423C] md:w-1/3 text-right">Your Data…..Under Your Control</h2>
           <p class="mt-4 md:mt-0 md:mr-8 text-[#1E2D2F] text-lg md:w-2/3 text-right">
@@ -284,7 +300,6 @@
           </p>
         </div>
     
-        <!-- Third Item (Left) -->
         <div class="flex flex-col md:flex-row items-start md:items-center">
           <h2 class="text-2xl md:text-3xl font-semibold text-[#12423C] md:w-1/3">Flexible, Scalable, and Quick</h2>
           <p class="mt-4 md:mt-0 md:ml-8 text-[#1E2D2F] text-lg md:w-2/3">
@@ -292,7 +307,6 @@
           </p>
         </div>
     
-        <!-- Fourth Item (Right) -->
         <div class="flex flex-col md:flex-row-reverse items-start md:items-center">
           <h2 class="text-2xl md:text-3xl font-semibold text-[#12423C] md:w-1/3 text-right">Advanced Review and Redaction</h2>
           <p class="mt-4 md:mt-0 md:mr-8 text-[#1E2D2F] text-lg md:w-2/3 text-right">
@@ -300,7 +314,6 @@
           </p>
         </div>
     
-        <!-- Fifth Item (Left) -->
         <div class="flex flex-col md:flex-row items-start md:items-center">
           <h2 class="text-2xl md:text-3xl font-semibold text-[#12423C] md:w-1/3">Efficient Entity Management Powered by AI</h2>
           <p class="mt-4 md:mt-0 md:ml-8 text-[#1E2D2F] text-lg md:w-2/3">
@@ -308,7 +321,6 @@
           </p>
         </div>
     
-        <!-- Sixth Item (Right) -->
         <div class="flex flex-col md:flex-row-reverse items-start md:items-center">
           <h2 class="text-2xl md:text-3xl font-semibold text-[#12423C] md:w-1/3 text-right">Proven and Reliable with No Surprises</h2>
           <p class="mt-4 md:mt-0 md:mr-8 text-[#1E2D2F] text-lg md:w-2/3 text-right">
@@ -323,12 +335,15 @@
         <div class="hidden sm:block w-full h-[1px] bg-gray-500"></div>
         <div class="hidden md:block w-full h-[1px] bg-gray-500"></div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="bg-[#EAF4F2] py-16 px-6 md:px-12 lg:px-20">
+    <!-- <section class="bg-[#EAF4F2] py-16 px-6 md:px-12 lg:px-20">
       <div class="max-w-6xl mx-auto space-y-12">
+
+        <p class="text-[#198C7B] text-center uppercase text-2xl font-semibold tracking-wide">
+          Intelligent Breach Management with 4iG®
+        </p>
         
-        <!-- Titles & Descriptions -->
         <div class="space-y-12">
           <div class="md:w-3/4">
             <h2 class="text-2xl md:text-3xl font-semibold text-[#12423C]">Complete Control Over Breach Data with 4iG®</h2>
@@ -394,14 +409,108 @@ Unlike SaaS-based competitors, BreachProfiler™ is not a hosted service—so da
         </div>
     
       </div>
-    </section>
+    </section> -->
+
+    <section class="bg-[#EAF4F2] py-16 px-6 md:px-12 lg:px-24">
+      <div class="max-w-8xl mx-auto">
+        <!-- Section Title -->
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-[#12423C]">
+            Intelligent Breach Management with 4iG®
+          </h2>
+          <p class="mt-4 text-xl text-[#1E2D2F]">
+            Discover how our cutting-edge platform ensures secure, efficient, and scalable breach data control.
+          </p>
+        </div>
     
+        <!-- Columns Layout -->
+        <div class="columns-1 md:columns-2 gap-8">
+          <!-- Card 1 -->
+          <div class="bg-white rounded-lg shadow p-8 flex flex-col break-inside-avoid mb-8">
+            <h3 class="text-2xl font-semibold text-[#12423C] border-b border-gray-200 pb-2 mb-4">
+              Complete Control Over Breach Data with 4iG®
+            </h3>
+            <p class="text-[#1E2D2F] text-md mb-4 truncate-text">
+              In the ever-evolving landscape of incident response, the need for swift and accurate post-cyber-breach document review has never been more critical. Infinnium’s 4iG® BreachProfiler™ stands out by providing the fastest and most comprehensive way to identify entities requiring notification, tailored to your and counsel’s specifications.  Powered by machine learning and generative AI models, it ensures a quick, seamless, and compliant response to potential breaches as just one part of the complete 4iG® Information Governance platform
+            </p>
+            <a href="#" class="mt-auto text-[#E76F51] hover:text-[#E65A4E] font-medium inline-block hover:underline read-more-btn">
+              Read More →
+            </a>
+          </div>
+    
+          <!-- Card 2 -->
+          <div class="bg-white rounded-lg shadow p-8 flex flex-col break-inside-avoid mb-8">
+            <h3 class="text-2xl font-semibold text-[#12423C] border-b border-gray-200 pb-2 mb-4">
+              Your Data…..Under Your Control
+            </h3>
+            <p class="text-[#1E2D2F] text-md mb-4 truncate-text">
+              Infinnium BreachProfiler™ has capabilities in the breach review domain that are unparalleled and distinctly unique. The solution offers the flexibility of on-site deployment, ensuring data remains within the client’s premises, or securely captured by incident response teams for ingestion into the platform.Unlike SaaS-based competitors, BreachProfiler™ is not a hosted service—so data never leaves your environment. Whether deployed on-site or securely captured by incident response teams, 4iG® ensures that your breached data remains securely within your control. This eliminates the need to send sensitive information to third parties, reducing the risk of exposure and providing peace of mind that your data is safe throughout the review process.  If you prefer to use it via a service provider, we have a network of trusted partners that host BreachProfiler™ and can provide our technology to suit your needs.
+            </p>
+            <a href="#" class="mt-auto text-[#E76F51] hover:text-[#E65A4E] font-medium inline-block hover:underline read-more-btn">
+              Read More →
+            </a>
+          </div>
+    
+          <!-- Card 3 -->
+          <div class="bg-white rounded-lg shadow p-8 flex flex-col break-inside-avoid mb-8">
+            <h3 class="text-2xl font-semibold text-[#12423C] border-b border-gray-200 pb-2 mb-4">
+              Flexible, Scalable, and Quick
+            </h3>
+            <p class="text-[#1E2D2F] text-md mb-4 truncate-text">
+              The solution’s ingestion speed is highly scalable, adjusting vertically and horizontally to meet even the most stringent timelines. Through advanced indexing, BreachProfiler™ applies OCR to ensure comprehensive data capture, supporting 100+ OCR languages. It automatically identifies sensitive data like PII/PHI/PCI/PXI using 600+ accuracy-tunable definitions, with provisions for additional unlimited custom definitions as well.
+            </p>
+            <a href="#" class="mt-auto text-[#E76F51] hover:text-[#E65A4E] font-medium inline-block hover:underline read-more-btn">
+              Read More →
+            </a>
+          </div>
+    
+          <!-- Card 4 -->
+          <div class="bg-white rounded-lg shadow p-8 flex flex-col break-inside-avoid mb-8">
+            <h3 class="text-2xl font-semibold text-[#12423C] border-b border-gray-200 pb-2 mb-4">
+              Advanced Review and Redaction
+            </h3>
+            <p class="text-[#1E2D2F] text-md mb-4 truncate-text">
+              BreachProfiler™ offers a comprehensive review component supporting numerous reviewers with enhanced security measures such as granular account security, batching, tagging palettes, tagging logic, and detailed reviewer metrics. Our proprietary native redaction engine, ObscurePI®, automates rules-based redaction based on specified terms or PII definitions. BreachProfiler™ also processes hundreds of files in their native format, producing fully redacted native files without converting to PDF or other formats. It seamlessly integrates with Relativity, enabling direct export/import, creation of load files, images, PDFs, and much more.
+            </p>
+            <a href="#" class="mt-auto text-[#E76F51] hover:text-[#E65A4E] font-medium inline-block hover:underline read-more-btn">
+              Read More →
+            </a>
+          </div>
+    
+          <!-- Card 5 -->
+          <div class="bg-white rounded-lg shadow p-8 flex flex-col break-inside-avoid mb-8">
+            <h3 class="text-2xl font-semibold text-[#12423C] border-b border-gray-200 pb-2 mb-4">
+              Efficient Entity Management Powered by AI
+            </h3>
+            <p class="text-[#1E2D2F] text-md mb-4 truncate-text">
+              The solution’s entity identification and automated entity-to-file association functionalities significantly reduce review time and ensure a robust audit trail. Identified entities and PII are instantly accessible in customizable reports, including pre-built reports tailored for common requirements. Users can search by PII type, entity, or PII volume, export data for jurisdictional review, generate third-party notification lists for legal counsel, and compile lists of unmatched PII values for further investigation.  In addition to our proven machine learning algorithms, you can also choose to employ GenAI to enhance insights and accuracy via a private Large Language Model we’ve developed or plug in your own
+            </p>
+            <a href="#" class="mt-auto text-[#E76F51] hover:text-[#E65A4E] font-medium inline-block hover:underline read-more-btn">
+              Read More →
+            </a>
+          </div>
+    
+          <!-- Card 6 -->
+          <div class="bg-white rounded-lg shadow p-8 flex flex-col break-inside-avoid mb-8">
+            <h3 class="text-2xl font-semibold text-[#12423C] border-b border-gray-200 pb-2 mb-4">
+              Proven and Reliable with No Surprises
+            </h3>
+            <p class="text-[#1E2D2F] text-md mb-4 truncate-text">
+              Most importantly, BreachProfiler™ is battle tested and trusted by some of the largest providers of data breach reviews in the world.  We have clients processing terabytes of source data every day with ease, and others managing more than 750 million records within a single data “space” inside the platform.  While other platforms often charge extra when large volumes of structured PII are detected within a single file as well as high monthly hosting costs, 4iG® treats all data equally. There are no hidden upcharges based on the complexity of your data, ensuring predictable costs regardless of the breach’s size or structure
+            </p>
+            <a href="#" class="mt-auto text-[#E76F51] hover:text-[#E65A4E] font-medium inline-block hover:underline read-more-btn">
+              Read More →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
     
 
       <!-- Features section -->
-      <section class="bg-[#ffffff] text-[#12423C] py-16 px-6 sm:px-6 lg:px-8">
+      <section class="bg-[#ffffff] text-[#12423C] py-16 px-6 sm:px-6 lg:px-8" style="font-family: 'Manrope', 'Open Sans', sans-serif">
         <div class="max-w-7xl mx-auto">
-          <h2 class="text-4xl font-bold mb-20 tracking-wide text-center">
+          <h2 class="text-4xl font-semibold mb-20 tracking-wide text-center">
             Features
           </h2>
       
@@ -413,10 +522,10 @@ Unlike SaaS-based competitors, BreachProfiler™ is not a hosted service—so da
               </div>
               <div>
                 <h3 class="text-2xl font-semibold">Flexible Deployment</h3>
-                <button onclick="toggleDescription(1)" class="text-[#E76F51] hover:text-[#E65A4E] font-medium mt-3 inline-block hover:underline">
+                <!-- <button onclick="toggleDescription(1)" class="text-[#E76F51] hover:text-[#E65A4E] font-medium mt-3 inline-block hover:underline">
                   Read More →
-                </button>
-                <p id="desc-1" class="text-[#12423C] mt-2 hidden">
+                </button> -->
+                <p class="text-[#12423C] mt-2">
                   Deploy the platform in cloud, on-premises, or hybrid environments to adapt to organizational needs and infrastructure.</p>
               </div>
             </div>
@@ -428,10 +537,10 @@ Unlike SaaS-based competitors, BreachProfiler™ is not a hosted service—so da
               </div>
               <div>
                 <h3 class="text-2xl font-semibold">Advanced Review Capabilities</h3>
-                <button onclick="toggleDescription(2)" class="text-[#E76F51] hover:text-[#E65A4E] font-medium mt-3 inline-block hover:underline">
+                <!-- <button onclick="toggleDescription(2)" class="text-[#E76F51] hover:text-[#E65A4E] font-medium mt-3 inline-block hover:underline">
                   Read More →
-                </button>
-                <p id="desc-2" class="text-[#12423C] mt-2 hidden">
+                </button> -->
+                <p class="text-[#12423C] mt-2">
                   Leverage powerful tools to quickly analyze breached data, identify affected individuals, and streamline the review process.</p>
               </div>
             </div>
@@ -443,10 +552,7 @@ Unlike SaaS-based competitors, BreachProfiler™ is not a hosted service—so da
               </div>
               <div>
                 <h3 class="text-2xl font-semibold">High Data Security</h3>
-                <button onclick="toggleDescription(3)" class="text-[#E76F51] hover:text-[#E65A4E] font-medium mt-3 inline-block hover:underline">
-                  Read More →
-                </button>
-                <p id="desc-3" class="text-[#12423C] mt-2 hidden">
+                <p class="text-[#12423C] mt-2">
                   Protect breached data with robust encryption and secure access controls, ensuring sensitive information remains safeguarded.
                 </p>
               </div>
@@ -459,10 +565,7 @@ Unlike SaaS-based competitors, BreachProfiler™ is not a hosted service—so da
               </div>
               <div>
                 <h3 class="text-2xl font-semibold">Automate Entity & Sensitive Data Identification</h3>
-                <button onclick="toggleDescription(4)" class="text-[#E76F51] hover:text-[#E65A4E] font-medium mt-3 inline-block hover:underline">
-                  Read More →
-                </button>
-                <p id="desc-4" class="text-[#12423C] mt-2 hidden">
+                <p class="text-[#12423C] mt-2">
                   Automatically detect and categorize personal information and sensitive data within breached datasets.
                 </p>
               </div>
@@ -475,10 +578,7 @@ Unlike SaaS-based competitors, BreachProfiler™ is not a hosted service—so da
               </div>
               <div>
                 <h3 class="text-2xl font-semibold">Highly Scalable</h3>
-                <button onclick="toggleDescription(5)" class="text-[#E76F51] hover:text-[#E65A4E] font-medium mt-3 inline-block hover:underline">
-                  Read More →
-                </button>
-                <p id="desc-5" class="text-[#12423C] mt-2 hidden">
+                <p class="text-[#12423C] mt-2">
                   Handle data breach reviews of any size, scaling efficiently to accommodate large volumes of compromised data
                 </p>
               </div>
@@ -491,10 +591,7 @@ Unlike SaaS-based competitors, BreachProfiler™ is not a hosted service—so da
               </div>
               <div>
                 <h3 class="text-2xl font-semibold">Fast & Easy Notification List Creation</h3>
-                <button onclick="toggleDescription(6)" class="text-[#E76F51] hover:text-[#E65A4E] font-medium mt-3 inline-block hover:underline">
-                  Read More →
-                </button>
-                <p id="desc-6" class="text-[#12423C] mt-2 hidden">
+                <p class="text-[#12423C] mt-2">
                   Generate accurate notification lists quickly and efficiently, ensuring timely communication with affected individuals.
                 </p>
               </div>
@@ -510,20 +607,20 @@ Unlike SaaS-based competitors, BreachProfiler™ is not a hosted service—so da
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 text-center mr-8">
           <div data-aos="fade-up" data-aos-delay="200">
-            <h3 class="text-3xl font-bold text-gray-900 count-up" data-count="50">0 +</h3>
-            <p class="text-[#E76F51]">Data Connectors</p>
+            <h3 class="text-3xl font-bold text-[#E76F51] count-up" data-count="50">0 +</h3>
+            <p class="text-[#000000]">Data Connectors</p>
           </div>
           <div data-aos="fade-up" data-aos-delay="300">
-            <h3 class="text-3xl font-bold text-gray-900 count-up" data-count="600">0+</h3>
-            <p class="text-[#E76F51]">PXI Definitions</p>
+            <h3 class="text-3xl font-bold text-[#E76F51] count-up" data-count="600">0+</h3>
+            <p class="text-[#000000]">PXI Definitions</p>
           </div>
           <div data-aos="fade-up" data-aos-delay="400">
-            <h3 class="text-3xl font-bold text-gray-900 count-up" data-count="1500">0 +</h3>
-            <p class="text-[#E76F51]">Retention Policies</p>
+            <h3 class="text-3xl font-bold text-[#E76F51] count-up" data-count="1500">0 +</h3>
+            <p class="text-[#000000]">Retention Policies</p>
           </div>
           <div data-aos="fade-up" data-aos-delay="500">
-            <h3 class="text-3xl font-bold text-gray-900 count-up" data-count="10">0 +</h3>
-            <p class="text-[#E76F51]">Data Under Management <span class="text-sm">(Pbs)</span></p>
+            <h3 class="text-3xl font-bold text-[#E76F51] count-up" data-count="10">0 +</h3>
+            <p class="text-[#000000]">Data Under Management <span class="text-sm">(Pbs)</span></p>
           </div>
         </div>
       </section>
@@ -775,6 +872,7 @@ Unlike SaaS-based competitors, BreachProfiler™ is not a hosted service—so da
               <li><a href="#" class="text-black hover:text-black">About Us</a></li>
               <li><a href="#" class="text-black hover:text-black">Contact Us</a></li>
               <li><a href="#" class="text-black hover:text-black">Blogs</a></li>
+              <li><a href="#" class="text-black hover:text-black">Innovate With Us</a></li>
             </ul>
           </div>
   
@@ -815,26 +913,27 @@ Unlike SaaS-based competitors, BreachProfiler™ is not a hosted service—so da
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const readMoreBtns = document.querySelectorAll(".read-more-btn");
     
-        readMoreBtns.forEach((btn) => {
-          btn.addEventListener("click", function (e) {
-            e.preventDefault();
-            const text = this.previousElementSibling;
-            
-            if (text.classList.contains("truncate-text")) {
-              text.classList.remove("truncate-text");
-              this.innerHTML = "Read Less ←";
-            } else {
-              text.classList.add("truncate-text");
-              this.innerHTML = "Read More →";
-            }
-          });
+    <script>
+      document.querySelectorAll(".read-more-btn").forEach(button => {
+        button.addEventListener("click", (e) => {
+          e.preventDefault();
+          const card = button.closest('.break-inside-avoid');
+          const paragraph = button.previousElementSibling;
+          
+          // Toggle truncation
+          paragraph.classList.toggle("truncate-text");
+          
+          // Update button text
+          button.textContent = paragraph.classList.contains("truncate-text") 
+            ? "Read More →" 
+            : "Read Less ↑";
+          
+          // Force column layout maintenance
+          card.style.pageBreakInside = 'avoid';
+          card.style.breakInside = 'avoid';
         });
       });
-    </script>
-
+      </script>
 </body>
 </html>
