@@ -353,3 +353,7 @@ window.addEventListener('resize', function() {
     socket.style.opacity = '1';
   }
 });
+
+      function toggleDescription(id) {
+        document.getElementById(`desc-${id}`).classList.toggle("hidden");
+      }

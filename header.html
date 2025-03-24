@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Scrollbar Example</title>
+  <style>
+    /* Example scrollable container */
+    .custom-scroll {
+      height: 300px;
+      overflow-y: scroll;
+      /* For Firefox: initially make thumb transparent */
+      scrollbar-width: thin;
+      scrollbar-color: rgba(136,136,136,0) transparent;
+      background: #f9f9f9;
+      padding: 1rem;
+    }
+    
+    /* WebKit-based browsers */
+    .custom-scroll::-webkit-scrollbar {
+      width: 8px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: transparent; /* Hide the track */
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background-color: #888;
+      border-radius: 4px;
+      opacity: 0; /* Hidden by default */
+      transition: opacity 0.3s;
+    }
+    
+    /* When the container is scrolling, reveal the thumb */
+    .custom-scroll.scrolling::-webkit-scrollbar-thumb {
+      opacity: 1;
+    }
+    
+    /* For Firefox: when scrolling, override thumb color */
+    .custom-scroll.scrolling {
+      scrollbar-color: #888 transparent;
+    }
+  </style>
+</head>
+<body>
+  <div class="custom-scroll" id="scrollContainer">
+    <!-- Sample content -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum, nunc sit amet bibendum dapibus, orci felis lobortis nunc, ac viverra libero ipsum id magna. Donec sit amet magna nec odio tincidunt volutpat. Sed sollicitudin, urna a porttitor cursus, lectus elit pharetra turpis, in interdum leo mauris in ex. Cras ac diam in metus fermentum tincidunt. Duis sed tortor vitae risus cursus pharetra. Donec tincidunt, quam vitae aliquam ultrices, erat lorem ultricies nulla, at finibus elit lorem quis libero.</p>
+    <p>Maecenas in urna ut ipsum volutpat commodo. Quisque id sem quis sapien porttitor luctus. Duis eget risus et purus suscipit aliquet. Donec malesuada, sapien in molestie vehicula, justo risus molestie tellus, non ultricies odio tortor non nulla. Morbi a urna ut sapien dictum tempus. Donec maximus consectetur sapien, sed faucibus urna interdum in. Integer posuere lorem in mauris interdum, sit amet ultrices sapien efficitur.</p>
+    <p>Fusce eget semper magna, vitae faucibus libero. Vestibulum sit amet sollicitudin nulla. Quisque et lacus in nisl accumsan mattis. In eget mauris lacus. Mauris vestibulum velit non orci dictum, a faucibus ex hendrerit. Etiam pharetra dictum nunc nec pharetra. Vivamus consectetur, neque vel volutpat consequat, nisi turpis consequat libero, ut pretium tortor metus ut metus.</p>
+  </div>
+
+  <script>
+    // JavaScript to show the scrollbar thumb when scrolling
+    document.addEventListener("DOMContentLoaded", function() {
+      const scrollContainer = document.getElementById("scrollContainer");
+      let scrollTimeout;
+
+      scrollContainer.addEventListener("scroll", function() {
+        // Add the class to reveal the thumb
+        scrollContainer.classList.add("scrolling");
+        // Clear any existing timeout
+        clearTimeout(scrollTimeout);
+        // Remove the class after 1 second of no scrolling
+        scrollTimeout = setTimeout(() => {
+          scrollContainer.classList.remove("scrolling");
+        }, 1000);
+      });
+    });
+  </script>
+</body>
+</html>
