@@ -360,3 +360,24 @@ function toggleDescription(id) {
   desc.classList.toggle('truncate-text');
   button.textContent = desc.classList.contains('truncate-text') ? 'Read More →' : 'Read Less ↑';
 }
+
+// read more btn to read truncated text
+document.querySelectorAll(".read-more-btn").forEach(button => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    const card = button.closest('.break-inside-avoid');
+    const paragraph = button.previousElementSibling;
+    
+    // Toggle truncation
+    paragraph.classList.toggle("truncate_text");
+    
+    // Update button text
+    button.textContent = paragraph.classList.contains("truncate_text") 
+      ? "Read More →" 
+      : "Read Less ↑";
+    
+    // Force column layout maintenance
+    card.style.pageBreakInside = 'avoid';
+    card.style.breakInside = 'avoid';
+  });
+});
