@@ -14,18 +14,29 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap"
+    />
     <style>
       /* Ensure the hero slideshow container has a set height */
       #hero-slideshow {
         height: 400px; /* Adjust as needed */
       }
+      /* Excerpt truncation for mobile (2 lines) */
+      @media (max-width: 767px) {
+        .line-clamp-2 {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      }
     </style>
   </head>
   <body>
     <div style="font-family: 'Manrope', 'Open Sans', sans-serif">
-      <!-- header  -->
-       <!-- header  -->
+        <!-- header  -->
     <header id="header" class="fixed top-0 left-0 w-full z-30 header-bg transition-all duration-300" style="font-family: 'Manrope', 'Open Sans', sans-serif">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center max-w-[calc(100%-30px)] md:max-w-[calc(100%-100px)]">
           <!-- Logo Image -->
@@ -111,7 +122,7 @@
               <a href="#" class="hover:text-gray-300 flex items-center transition duration-300">Resources</a>
               <div class="absolute left-1/2 transform -translate-x-1/2 mt-0 hidden group-hover:flex flex-col bg-[#ffffff] text-[#444444] shadow-lg w-72 py-2 text-left rounded transition-all duration-300 z-50" style="margin-left: 85px;">
                 <a href="#" class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300">News and Events</a>
-                <a href="#" class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300">Blog</a>
+                <a href="blog.html" class="block px-5 py-3 hover:bg-[#EAF5F4] hover:text-[#000000] transition duration-300">Blog</a>
               </div>
             </div>
     
@@ -182,7 +193,7 @@
             </a>
             <div class="dropdown-menu ml-4 hidden">
               <a href="#" class="block py-1 text-gray-600">News and Events</a>
-              <a href="#" class="block py-1 text-gray-600">Blog</a>
+              <a href="blog.html" class="block py-1 text-gray-600">Blog</a>
             </div>
           </div>
           <!-- About us (no dropdown) -->
@@ -197,7 +208,7 @@
         </nav>
       </div>
       <!-- HERO SECTION (Black BG, Rotating Top 3 Blogs) -->
-      <section class="bg-black text-white py-10 md:py-20">
+      <section class="bg-black text-white pt-20 md:pt-28 pb-10 md:py-20">
         <div class="max-w-7xl mx-auto px-4 relative">
           <!-- Slideshow Container -->
           <div id="hero-slideshow" class="relative overflow-hidden">
@@ -228,32 +239,31 @@
         </div>
       </section>
 
-      <!-- expert section -->
-    <section class="relative bg-[#E76F51] text-white flex justify-center items-center h-[220px] sm:h-[260px] md:h-[300px] lg:h-[250px] px-4 sm:px-6"
-  style="font-family: 'Manrope', 'Open Sans', sans-serif">
+       <!-- expert section -->
+    <section class="relative bg-[#E76F51] text-white flex justify-center items-center h-[220px] sm:h-[260px] md:h-[300px] lg:h-[350px] px-4 sm:px-6"
+    style="font-family: 'Manrope', 'Open Sans', sans-serif">
+    
+    <!-- Background Animation Canvas -->
+    <canvas id="particles" class="absolute top-0 left-0 w-full h-full"></canvas>
   
-  <!-- Background Animation Canvas -->
-  <canvas id="particles" class="absolute top-0 left-0 w-full h-full"></canvas>
-
-  <!-- Section Content -->
-  <div class="relative flex flex-col sm:flex-row justify-between items-center w-full max-w-6xl px-4 sm:px-6 z-10">
-    
-    <!-- Heading -->
-    <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-center sm:text-left mb-4 sm:mb-0">
-      Talk to our Experts
-    </h2>
-    
-    <!-- Button -->
-    <button class="expert hover:text-[#000] font-medium rounded-full transition-all duration-300
-      flex items-center justify-center w-[10rem] h-[2.75rem] sm:w-[11rem] sm:h-[3rem] md:w-[12rem] md:h-[3.25rem] mt-4 sm:mt-0">
-      <span>Get In Touch <span class="text-lg ml-2">→</span></span>
-    </button>
-
-  </div>
-</section>
-
+    <!-- Section Content -->
+    <div class="relative flex flex-col sm:flex-row justify-between items-center w-full max-w-6xl px-4 sm:px-6 z-10">
+      
+      <!-- Heading -->
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-center sm:text-left mb-4 sm:mb-0">
+        Talk to our Experts
+      </h2>
+      
+      <!-- Button -->
+      <button class="expert hover:text-[#000] font-medium rounded-full transition-all duration-300
+        flex items-center justify-center w-[10rem] h-[2.75rem] sm:w-[11rem] sm:h-[3rem] md:w-[12rem] md:h-[3.25rem] mt-4 sm:mt-0">
+        <span>Get In Touch <span class="text-lg ml-2">→</span></span>
+      </button>
+  
+    </div>
+  </section>
       <!-- Footer Section -->
-    <footer class="bg-[#f6f9fb] text-white py-10 px-6 md:px-20" style="font-family: 'Manrope', 'Open Sans', sans-serif">
+      <footer class="bg-[#f6f9fb] text-white py-10 px-6 md:px-20" style="font-family: 'Manrope', 'Open Sans', sans-serif">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           <!-- Logo & Subscription -->
           <div>
@@ -383,7 +393,7 @@
     </div>
     <!-- JavaScript to dynamically build the hero slides & blog listing -->
     <script>
-      // Sample data for 9 blogs (each with a link property)
+      // Sample data for blogs
       const blogPosts = [
         {
           category: "Blogs",
@@ -557,18 +567,21 @@
         },
       ];
 
-      // Global variables for pagination
       let currentBlogIndex = 0;
       const blogsPerPage = 6;
 
-      // Dynamically render the top 3 posts in the hero slideshow
+      // Render Hero Slides with clickable slides and responsive text container
       function renderHeroSlides() {
         const heroSlideshow = document.getElementById("hero-slideshow");
         const top3 = blogPosts.slice(0, 3); // first 3 from the array
 
         top3.forEach((post, index) => {
+          // Wrap the entire slide in an anchor tag
+          const slideLink = document.createElement("a");
+          slideLink.href = post.link;
+          slideLink.classList.add("block");
+
           const slide = document.createElement("div");
-          // Position each slide absolutely and set transition classes for opacity
           slide.classList.add(
             "slide",
             "absolute",
@@ -582,119 +595,102 @@
             "space-x-0",
             "md:space-x-8"
           );
-          // Set initial opacity: first slide is visible, others are hidden
-          if (index === 0) {
-            slide.classList.add("opacity-100");
-          } else {
-            slide.classList.add("opacity-0");
-          }
+          slide.classList.add(index === 0 ? "opacity-100" : "opacity-0");
+
+          // Use a responsive min-height on the text container so the date is visible on mobile.
           slide.innerHTML = `
-          <div class="w-full md:w-1/3">
-            <img 
-              src="${post.image}" 
-              alt="Blog Image ${index + 1}"
-              class="w-full h-auto object-cover"
-            />
-          </div>
-          <div class="w-full md:w-2/3 mt-4 md:mt-0">
-            <p class="text-sm font-medium uppercase text-[#E76F51] mb-2">${post.category}</p>
-            <h2 class="text-xl md:text-2xl font-semibold mb-3">
-              ${post.title}
-            </h2>
-            <p class="text-gray-200 text-sm mb-4">
-              ${post.excerpt}
-            </p>
-            <div class="flex items-center text-gray-400 text-sm">
-              <i class="far fa-calendar-alt mr-2"></i>${post.date}
+            <div class="w-full md:w-1/3">
+              <img 
+                src="${post.image}" 
+                alt="Blog Image ${index + 1}"
+                class="w-full h-auto object-cover"
+              />
             </div>
-          </div>
-        `;
-          heroSlideshow.appendChild(slide);
+            <div class="w-full md:w-2/3 mt-4 md:mt-0 flex flex-col justify-between min-h-[234px]">
+              <div>
+                <p class="text-sm font-medium uppercase text-[#E76F51] mb-2">${post.category}</p>
+                <h2 class="text-xl md:text-2xl font-semibold mb-3">
+                  ${post.title}
+                </h2>
+                <p class="text-gray-200 text-sm mb-4 line-clamp-2">
+                  ${post.excerpt}
+                </p>
+              </div>
+              <div class="flex items-center text-gray-400 text-sm">
+                <i class="far fa-calendar-alt mr-2"></i>${post.date}
+              </div>
+            </div>
+          `;
+          slideLink.appendChild(slide);
+          heroSlideshow.appendChild(slideLink);
         });
       }
 
-      // Append a batch of blog cards to the listing section
+      // Append Blog Cards for listing section
       function appendBlogCards(startIndex, count) {
         const blogGrid = document.getElementById("blog-grid");
         const endIndex = Math.min(startIndex + count, blogPosts.length);
 
         for (let i = startIndex; i < endIndex; i++) {
           const post = blogPosts[i];
-
-          // Create clickable card using anchor tag
           const cardLink = document.createElement("a");
           cardLink.href = post.link;
           cardLink.classList.add("block");
 
           cardLink.innerHTML = `
-          <div class="bg-white shadow-sm rounded-lg overflow-hidden flex flex-col h-full">
-            <div class="h-40 overflow-hidden">
-              <img 
-                src="${post.image}" 
-                alt="Blog Post"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="p-4 flex flex-col flex-grow">
-              <p class="text-sm font-medium text-[#E76F51] uppercase mb-2">${post.category}</p>
-              <h3 class="text-lg font-semibold mb-2">
-                ${post.title}
-              </h3>
-              <p class="text-gray-600 text-sm mb-3 flex-grow">
-                ${post.excerpt}
-              </p>
-              <div class="flex items-center text-gray-400 text-sm">
-                <i class="far fa-calendar-alt mr-2"></i>${post.date}
+            <div class="bg-white shadow-sm rounded-lg overflow-hidden flex flex-col h-full">
+              <div class="h-40 overflow-hidden">
+                <img 
+                  src="${post.image}" 
+                  alt="Blog Post"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-4 flex flex-col flex-grow">
+                <p class="text-sm font-medium text-[#E76F51] uppercase mb-2">${post.category}</p>
+                <h3 class="text-lg font-semibold mb-2">
+                  ${post.title}
+                </h3>
+                <p class="text-gray-600 text-sm mb-3 flex-grow">
+                  ${post.excerpt}
+                </p>
+                <div class="flex items-center text-gray-400 text-sm">
+                  <i class="far fa-calendar-alt mr-2"></i>${post.date}
+                </div>
               </div>
             </div>
-          </div>
-        `;
+          `;
           blogGrid.appendChild(cardLink);
         }
         currentBlogIndex = endIndex;
 
-        // Hide Load More button if all blogs are loaded
         if (currentBlogIndex >= blogPosts.length) {
           document.getElementById("loadMoreBtn").classList.add("hidden");
         }
       }
 
-      // Initial render of blog listing
       function renderBlogListing() {
         appendBlogCards(0, blogsPerPage);
       }
 
-      // On page load, build the hero slides & blog listing, then set up the slideshow rotation
       document.addEventListener("DOMContentLoaded", () => {
-        // 1. Render the hero slides
         renderHeroSlides();
-
-        // 2. Render the initial blog listing (6 posts)
         renderBlogListing();
-
-        // 3. Setup Load More button event
         document.getElementById("loadMoreBtn").addEventListener("click", () => {
           appendBlogCards(currentBlogIndex, blogsPerPage);
         });
 
-        // 4. Slideshow fade logic for hero section using opacity transitions
+        // Slideshow fade logic
         const slides = document.querySelectorAll("#hero-slideshow .slide");
         let currentIndex = 0;
 
         function nextSlide() {
-          // Fade out current slide
           slides[currentIndex].classList.remove("opacity-100");
           slides[currentIndex].classList.add("opacity-0");
-
-          // Determine next slide index
           currentIndex = (currentIndex + 1) % slides.length;
-
-          // Fade in next slide
           slides[currentIndex].classList.remove("opacity-0");
           slides[currentIndex].classList.add("opacity-100");
         }
-
-        // Rotate every 4 seconds
         setInterval(nextSlide, 4000);
       });
     </script>
