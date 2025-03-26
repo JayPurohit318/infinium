@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
           'fab fa-slack-hash',
           'fab fa-medium-m',
         ];
-      
+       
         // Add icons to all hexagons EXCEPT the center one
         const gels = document.querySelectorAll('.gel:not(.center-gel)');
         gels.forEach((gel, index) => {
