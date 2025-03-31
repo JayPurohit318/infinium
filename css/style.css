@@ -33,6 +33,7 @@ body {
 }
 .header-bg-scrolled {
   background-color: white !important; /* White background when scrolled */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for visibility */
 }
 .header-bg-scrolled svg path[fill="white"] {
   fill: #000 !important;
@@ -768,7 +769,7 @@ height: 80px;
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
-  border: 2px solid #e76f51;
+  border: 1px solid #e76f51;
   border-radius: 25px;
   outline: none;
   overflow: hidden;
@@ -801,7 +802,7 @@ height: 80px;
 
 .common:hover {
   color: #ffffff;
-  border: 2px solid #e76f51;
+  border: 1px solid #e76f51;
 }
 
 .common:hover::before {
