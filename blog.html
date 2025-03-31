@@ -2,22 +2,18 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="css/style.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="js/script.js" defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Page</title>
+    <title>Blog - Infinnium</title>
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Use one consistent version of FontAwesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/ef5eec4aba.js" crossorigin="anonymous"></script>
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
       /* Ensure the hero slideshow container has a set height */
       #hero-slideshow {
@@ -638,7 +634,7 @@
           cardLink.classList.add("block");
 
           cardLink.innerHTML = `
-            <div class="bg-white shadow-sm rounded-lg overflow-hidden flex flex-col h-full">
+            <div class="bg-white rounded-lg overflow-hidden flex flex-col h-full shadow-lg">
               <div class="h-40 overflow-hidden">
                 <img 
                   src="${post.image}" 
