@@ -27,9 +27,19 @@ body {
 .active-link {
   color: #38bdf8; /* Highlight active link */
 }
+
+
 .header-bg {
   background-color: transparent;
   transition: background-color 0.3s ease;
+}
+.header-without-bg {
+  color: #DDDDDD; /* Soft white */
+  transition: color 0.3s ease-in-out;
+}
+
+.header-without-bg:hover {
+  color: #FFFFFF; /* Pure white on hover */
 }
 .header-bg-scrolled {
   background-color: white !important; /* White background when scrolled */
