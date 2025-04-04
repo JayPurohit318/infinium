@@ -659,7 +659,7 @@ height: 80px;
   left: 0;
   width: 0;
   height: 2px;
-  background: #e76f51;
+  background: #2a9d8e;
   transition: width 0.3s ease-in-out;
 }
 
@@ -952,19 +952,20 @@ a.relative.hidden.md\:flex:hover::before {
 
 /* WebKit-based browsers */
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 6px;
   display: hidden; /* Adjust width of the scrollbar */
+  background: transparent; 
 }
-::-webkit-scrollbar-track {
-  background: transparent; /* Background of the scrollbar track */
-}
+/* ::-webkit-scrollbar-track {
+  background: transparent; 
+} */
 ::-webkit-scrollbar-thumb {
-  background-color: #e66f51; /* Scrollbar thumb color */
+  background-color: #555; /* Scrollbar thumb color */
   border-radius: 4px; /* Round the thumb edges */
   border: 2px solid #f1f1f1; /* Optional: space around thumb */
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Thumb hover color */
+  background-color: #E76F52; /* Thumb hover color */
 }
 
 /* for solution pages */
