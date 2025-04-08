@@ -1027,3 +1027,17 @@ a.relative.hidden.md\:flex:hover::before {
 .feature-text-container {
   width: 100%;
 }
+.zoom-static {
+  transform-box: fill-box; /* Super important */
+  transform-origin: center;
+  animation: pulseZoom 2s ease-in-out infinite;
+}
+
+@keyframes pulseZoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
