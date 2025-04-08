@@ -749,7 +749,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const button = document.querySelector(`[onclick="toggleDescription(${id})"]`);
           desc.classList.toggle("truncate-text");
           button.textContent = desc.classList.contains("truncate-text")
-            ? "Read More →"
+            ? "Read More ↓"
             : "Read Less ↑";
         }
 
@@ -765,7 +765,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Update button text
             button.textContent = paragraph.classList.contains("truncate_text")
-              ? "Read More →"
+              ? "Read More ↓"
               : "Read Less ↑";
 
             // Force column layout maintenance
